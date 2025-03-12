@@ -6,45 +6,48 @@
     <meta name="description" content="Oneway Asphalt Seal - Driveway Sealing, Asphalt Repair, and Power Washing Services">
     <title>Oneway Asphalt Seal</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
         header {
+            background: #E43D30;
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #E43D30;
-            color: white;
-            padding: 20px;
-            font-size: 20px;
-        }
-        .logo {
-            font-weight: bold;
         }
         .nav-links {
             display: flex;
             gap: 20px;
         }
         .nav-links a, .cta-button {
-            color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            background: black;
+            color: white;
+            padding: 10px 15px;
             border-radius: 5px;
         }
-        .hamburger {
+        .cta-button {
+            background: #28a745;
+            font-weight: bold;
+        }
+        .menu-toggle {
             display: none;
-            font-size: 24px;
+            font-size: 25px;
             cursor: pointer;
         }
         .hero {
             position: relative;
             width: 100%;
             height: 600px;
-            background: url('IMG_1551.jpg') no-repeat center center/cover;
+            background: url('A57326D9-AEE5-4658-BF92-AB713FB437BA.jpeg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -52,70 +55,82 @@
         }
         .hero-text {
             background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
             color: white;
-            padding: 20px;
-            font-size: 32px;
+            font-size: 30px;
             font-weight: bold;
-            border-radius: 10px;
-        }
-        .floating-form {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 600px;
-        }
-        .floating-form input, .floating-form button {
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .floating-form button {
-            background: #E43D30;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
+        .cta {
+            margin: 20px;
+            text-align: center;
         }
+        .cta a {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                flex-direction: column;
+                background: #E43D30;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 50%;
+                text-align: center;
+                padding: 10px;
             }
-            .hamburger {
+            .nav-links a {
                 display: block;
+                padding: 10px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero-text {
+                font-size: 24px;
+                padding: 15px;
             }
         }
     </style>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav-links");
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <div class="logo">Oneway Asphalt Seal</div>
-        <nav class="nav-links">
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+        <div>Oneway Asphalt Seal</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-links" id="nav-links">
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="estimate.html" class="cta-button">Free Estimate</a>
         </nav>
-        <a href="#estimate" class="cta-button">Free Estimate</a>
-        <div class="hamburger">☰</div>
     </header>
     <div class="hero">
-        <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
+        <div class="hero-text">
+            Professional Driveway Sealing & Asphalt Repair
+        </div>
     </div>
-    <div class="floating-form">
-        <h3>Request a Free Estimate</h3>
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="text" placeholder="Phone Number" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="text" placeholder="Address or Major Intersection" required>
-            <button type="submit">Submit</button>
-        </form>
+    <div class="cta">
+        <a href="tel:6474255012">Call Now: 647-425-5012</a>
+        <a href="mailto:onewaysealing@gmail.com">Email Us</a>
     </div>
 </body>
 </html>
