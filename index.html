@@ -112,6 +112,9 @@
             border-radius: 5px;
         }
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -123,8 +126,9 @@
                 text-align: center;
                 padding: 10px;
             }
-            .menu-toggle {
+            .nav-links a {
                 display: block;
+                padding: 10px;
             }
             .hero-text {
                 font-size: 32px;
@@ -132,6 +136,14 @@
         }
     </style>
     <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav-links");
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
         let currentReview = 0;
         function showReview(step) {
             const reviews = document.querySelectorAll('.review');
@@ -144,7 +156,8 @@
 <body>
     <header>
         <div class="logo"><img src="IMG_1441.PNG" alt="Logo"></div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-links" id="nav-links">
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
@@ -157,9 +170,9 @@
     </div>
     <section class="review-slider">
         <button class="slider-btn" onclick="showReview(-1)">⬅</button>
-        <div class="review active-review"><img src="1-00aec15d.jpg" alt="Google Review 1"></div>
-        <div class="review"><img src="2-00aec15d.jpg" alt="Google Review 2"></div>
-        <div class="review"><img src="3-00aec15d.jpg" alt="Google Review 3"></div>
+        <div class="review active-review"><img src="review1.jpg" alt="Google Review 1"></div>
+        <div class="review"><img src="review2.jpg" alt="Google Review 2"></div>
+        <div class="review"><img src="review3.jpg" alt="Google Review 3"></div>
         <button class="slider-btn" onclick="showReview(1)">➡</button>
     </section>
 </body>
