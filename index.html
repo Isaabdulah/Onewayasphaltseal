@@ -6,6 +6,7 @@
     <meta name="description" content="Oneway Asphalt Seal - Driveway Sealing, Asphalt Repair, and Power Washing Services">
     <title>Oneway Asphalt Seal</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -39,7 +40,7 @@
             border-radius: 5px;
         }
         .cta-button {
-            background: #28a745;
+            background: orange;
             font-weight: bold;
         }
         .menu-toggle {
@@ -51,35 +52,47 @@
             position: relative;
             width: 100%;
             height: 600px;
-            background: url('A57326D9-AEE5-4658-BF92-AB713FB437BA.jpeg') no-repeat center center/cover;
+            background: url('background.jpg') no-repeat center center/cover;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             margin-top: 60px;
         }
         .hero-text {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
+            font-family: 'Playfair Display', serif;
             color: white;
-            font-size: 30px;
+            font-size: 26px;
             font-weight: bold;
-            border-radius: 5px;
+            margin-bottom: 20px;
         }
-        .cta {
-            margin: 20px;
-            text-align: center;
-        }
-        .cta a {
-            display: inline-block;
-            background: black;
+        .contact-button {
+            background: orange;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 25px;
+            font-size: 20px;
+            font-weight: bold;
             text-decoration: none;
-            margin: 10px;
             border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background: white;
+        }
+        .about-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 18px;
+            color: #555;
+        }
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -101,8 +114,8 @@
                 display: block;
             }
             .hero-text {
-                font-size: 24px;
-                padding: 15px;
+                font-size: 22px;
+                padding: 10px;
             }
         }
     </style>
@@ -132,10 +145,11 @@
         <div class="hero-text">
             Professional Driveway Sealing & Asphalt Repair
         </div>
+        <a href="tel:6474255012" class="contact-button">📞 Contact Now: 647-425-5012</a>
     </div>
-    <div class="cta">
-        <a href="tel:6474255012">Call Now: 647-425-5012</a>
-        <a href="mailto:onewaysealing@gmail.com">Email Us</a>
-    </div>
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>With 15 years of experience, Oneway Asphalt Seal is a family-owned business specializing in high-quality driveway sealing and asphalt repairs. We pride ourselves on reliability, precision, and using premium oil-based sealers to ensure long-lasting protection.</p>
+    </section>
 </body>
 </html>
