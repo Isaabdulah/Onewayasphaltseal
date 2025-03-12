@@ -6,6 +6,7 @@
     <meta name="description" content="Oneway Asphalt Seal - Driveway Sealing, Asphalt Repair, and Power Washing Services">
     <title>Oneway Asphalt Seal</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
         * {
             margin: 0;
@@ -17,7 +18,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background: #E43D30;
+            background: #D35400;
             color: white;
             padding: 15px 20px;
             font-size: 20px;
@@ -29,6 +30,9 @@
             top: 0;
             z-index: 1000;
         }
+        .logo img {
+            height: 50px;
+        }
         .nav-links {
             display: flex;
             gap: 20px;
@@ -38,10 +42,7 @@
             color: white;
             padding: 10px 15px;
             border-radius: 5px;
-        }
-        .cta-button {
-            background: orange;
-            font-weight: bold;
+            background: #D35400;
         }
         .menu-toggle {
             display: none;
@@ -51,54 +52,80 @@
         .hero {
             position: relative;
             width: 100%;
-            height: 600px;
+            height: 550px;
             background: url('background.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-top: 60px;
+            margin-top: 80px;
         }
         .hero-text {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             color: white;
-            font-size: 26px;
+            font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
         }
         .contact-button {
-            background: orange;
+            background: #D35400;
             color: white;
             padding: 15px 25px;
             font-size: 20px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         .about-section {
             padding: 50px;
             text-align: center;
             background: white;
+            position: relative;
         }
         .about-section h2 {
             font-size: 28px;
             color: #333;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-section h2::before {
+            content: "🏆 ";
+            font-size: 30px;
+            margin-right: 10px;
         }
         .about-section p {
             font-size: 18px;
             color: #555;
         }
-        /* Mobile Responsive */
+        .review-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            width: 100%;
+            padding: 20px;
+        }
+        .review {
+            display: none;
+            text-align: center;
+            width: 80%;
+        }
+        .active-review {
+            display: block;
+        }
+        .slider-btn {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background: #E43D30;
+                background: #D35400;
                 position: absolute;
                 top: 60px;
                 right: 0;
@@ -106,35 +133,28 @@
                 text-align: center;
                 padding: 10px;
             }
-            .nav-links a {
-                display: block;
-                padding: 10px;
-            }
             .menu-toggle {
                 display: block;
             }
             .hero-text {
-                font-size: 22px;
-                padding: 10px;
+                font-size: 28px;
             }
         }
     </style>
     <script>
-        function toggleMenu() {
-            var nav = document.getElementById("nav-links");
-            if (nav.style.display === "block") {
-                nav.style.display = "none";
-            } else {
-                nav.style.display = "block";
-            }
+        let currentReview = 0;
+        function showReview(step) {
+            const reviews = document.querySelectorAll('.review');
+            reviews[currentReview].classList.remove('active-review');
+            currentReview = (currentReview + step + reviews.length) % reviews.length;
+            reviews[currentReview].classList.add('active-review');
         }
     </script>
 </head>
 <body>
     <header>
-        <div>Oneway Asphalt Seal</div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <nav class="nav-links" id="nav-links">
+        <div class="logo"><img src="IMG_1441.PNG" alt="Logo"></div>
+        <nav class="nav-links">
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
@@ -142,14 +162,19 @@
         </nav>
     </header>
     <div class="hero">
-        <div class="hero-text">
-            Professional Driveway Sealing & Asphalt Repair
-        </div>
+        <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
         <a href="tel:6474255012" class="contact-button">📞 Contact Now: 647-425-5012</a>
     </div>
     <section class="about-section">
         <h2>About Us</h2>
-        <p>With 15 years of experience, Oneway Asphalt Seal is a family-owned business specializing in high-quality driveway sealing and asphalt repairs. We pride ourselves on reliability, precision, and using premium oil-based sealers to ensure long-lasting protection.</p>
+        <p>With 15 years of experience, Oneway Asphalt Seal is a family-owned business specializing in high-quality driveway sealing and asphalt repairs.</p>
+    </section>
+    <section class="review-slider">
+        <span class="slider-btn" onclick="showReview(-1)">⬅</span>
+        <div class="review active-review">"Mike and his crew did an amazing job!" - Frank Casera</div>
+        <div class="review">"Great pricing and professional service." - Enrico Mazzone</div>
+        <div class="review">"Very satisfied with their work." - George Lee</div>
+        <span class="slider-btn" onclick="showReview(1)">➡</span>
     </section>
 </body>
 </html>
