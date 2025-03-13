@@ -18,7 +18,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background: #CC3D00;
+            background: transparent;
             color: white;
             padding: 15px 20px;
             font-size: 20px;
@@ -42,7 +42,6 @@
             color: white;
             padding: 10px 15px;
             border-radius: 5px;
-            background: #CC3D00;
         }
         .menu-toggle {
             display: none;
@@ -64,10 +63,11 @@
         .hero-text, .review-section {
             font-family: 'Montserrat', sans-serif;
             color: white;
-            font-size: 42px;
+            font-size: 48px;
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+            text-align: center;
         }
         .review-section::after {
             content: " ⭐";
@@ -148,6 +148,29 @@
         }
         .right-btn {
             right: 10px;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(204, 61, 0, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 50%;
+                text-align: center;
+                padding: 10px;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+            .hero-text, .review-section {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
