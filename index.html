@@ -44,7 +44,7 @@
             border-radius: 5px;
         }
         .menu-toggle {
-            display: block;
+            display: none;
             font-size: 25px;
             cursor: pointer;
         }
@@ -80,8 +80,8 @@
             content: " ⭐";
         }
         .consultation-form {
-            width: 90%;
-            max-width: 1000px;
+            width: 80%;
+            max-width: 800px;
             margin: 30px auto;
             padding: 20px;
             background: white;
@@ -98,9 +98,9 @@
             border-top-right-radius: 10px;
         }
         .consultation-form input {
-            width: 48%;
+            width: 90%;
             padding: 10px;
-            margin: 10px 1%;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
@@ -157,6 +157,9 @@
             right: 10px;
         }
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -177,12 +180,6 @@
             }
         }
     </style>
-    <script>
-        function toggleMenu() {
-            var nav = document.getElementById("nav-links");
-            nav.style.display = nav.style.display === "block" ? "none" : "block";
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -195,5 +192,24 @@
             <a href="estimate.html" class="cta-button">Free Estimate</a>
         </nav>
     </header>
+    <div class="hero">
+        <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
+    </div>
+    <div class="consultation-form">
+        <h2>Request a Free Consultation</h2>
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Phone Number">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Address or Major Intersection">
+        <button type="submit">Submit</button>
+    </div>
+    <div class="review-section">Google Reviews</div>
+    <section class="review-slider">
+        <button class="slider-btn left-btn" onclick="showReview(-1)">⬅</button>
+        <div class="review active-review"><img src="review1.jpg" alt="Google Review 1"></div>
+        <div class="review"><img src="review2.jpg" alt="Google Review 2"></div>
+        <div class="review"><img src="review3.jpg" alt="Google Review 3"></div>
+        <button class="slider-btn right-btn" onclick="showReview(1)">➡</button>
+    </section>
 </body>
 </html>
