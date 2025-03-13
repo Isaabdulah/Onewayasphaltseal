@@ -78,6 +78,16 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .review-section {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 26px;
+            font-weight: bold;
+            color: black;
+        }
+        .review-section::before {
+            content: "⭐ ";
+        }
         .review-slider {
             display: flex;
             align-items: center;
@@ -85,7 +95,7 @@
             overflow: hidden;
             width: 100%;
             padding: 20px;
-            flex-direction: column;
+            position: relative;
         }
         .review {
             display: none;
@@ -110,6 +120,15 @@
             color: white;
             border: none;
             border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .left-btn {
+            left: 10px;
+        }
+        .right-btn {
+            right: 10px;
         }
         @media (max-width: 768px) {
             .menu-toggle {
@@ -135,23 +154,6 @@
             }
         }
     </style>
-    <script>
-        function toggleMenu() {
-            var nav = document.getElementById("nav-links");
-            if (nav.style.display === "block") {
-                nav.style.display = "none";
-            } else {
-                nav.style.display = "block";
-            }
-        }
-        let currentReview = 0;
-        function showReview(step) {
-            const reviews = document.querySelectorAll('.review');
-            reviews[currentReview].classList.remove('active-review');
-            currentReview = (currentReview + step + reviews.length) % reviews.length;
-            reviews[currentReview].classList.add('active-review');
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -164,16 +166,13 @@
             <a href="estimate.html" class="cta-button">Free Estimate</a>
         </nav>
     </header>
-    <div class="hero">
-        <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
-        <a href="tel:6474255012" class="contact-button">📞 Contact Now: 647-425-5012</a>
-    </div>
+    <div class="review-section">Google Reviews</div>
     <section class="review-slider">
-        <button class="slider-btn" onclick="showReview(-1)">⬅</button>
+        <button class="slider-btn left-btn" onclick="showReview(-1)">⬅</button>
         <div class="review active-review"><img src="review1.jpg" alt="Google Review 1"></div>
         <div class="review"><img src="review2.jpg" alt="Google Review 2"></div>
         <div class="review"><img src="review3.jpg" alt="Google Review 3"></div>
-        <button class="slider-btn" onclick="showReview(1)">➡</button>
+        <button class="slider-btn right-btn" onclick="showReview(1)">➡</button>
     </section>
 </body>
 </html>
