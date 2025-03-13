@@ -61,7 +61,7 @@
             text-align: center;
             margin-top: 80px;
         }
-        .hero-text {
+        .hero-text, .review-section {
             font-family: 'Montserrat', sans-serif;
             color: white;
             font-size: 42px;
@@ -69,28 +69,43 @@
             margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
         }
-        .contact-button {
+        .review-section::after {
+            content: " ⭐";
+        }
+        .consultation-form {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .consultation-form h2 {
             background: #CC3D00;
             color: white;
-            padding: 15px 25px;
-            font-size: 22px;
-            font-weight: bold;
-            text-decoration: none;
+            padding: 15px;
+            font-size: 24px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .consultation-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
         }
-        .review-section {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 26px;
-            font-weight: bold;
-            color: black;
-        }
-        .review-section::before {
-            content: "⭐ ";
+        .consultation-form button {
+            width: 100%;
+            padding: 15px;
+            background: #CC3D00;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         .review-slider {
             display: flex;
@@ -134,29 +149,6 @@
         .right-btn {
             right: 10px;
         }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: #CC3D00;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                width: 50%;
-                text-align: center;
-                padding: 10px;
-            }
-            .nav-links a {
-                display: block;
-                padding: 10px;
-            }
-            .hero-text {
-                font-size: 32px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -172,7 +164,14 @@
     </header>
     <div class="hero">
         <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
-        <a href="tel:6474255012" class="contact-button">📞 Contact Now: 647-425-5012</a>
+    </div>
+    <div class="consultation-form">
+        <h2>Request a Free Consultation</h2>
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Phone Number">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Address or Major Intersection">
+        <button type="submit">Submit</button>
     </div>
     <div class="review-section">Google Reviews</div>
     <section class="review-slider">
