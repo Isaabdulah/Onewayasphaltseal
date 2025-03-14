@@ -7,15 +7,18 @@
     <title>Oneway Asphalt Seal</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+
         header {
             background: #CC3D00;
             color: white;
@@ -29,24 +32,29 @@
             top: 0;
             z-index: 1000;
         }
+
         .logo img {
             height: 50px;
         }
+
         .nav-links {
             display: flex;
             gap: 20px;
         }
+
         .nav-links a {
             text-decoration: none;
             color: white;
             padding: 10px 15px;
             border-radius: 5px;
         }
+
         .menu-toggle {
             display: none;
             font-size: 25px;
             cursor: pointer;
         }
+
         .hero {
             position: relative;
             width: 100%;
@@ -59,6 +67,7 @@
             text-align: center;
             margin-top: 80px;
         }
+
         .hero-text {
             font-family: 'Montserrat', sans-serif;
             color: white;
@@ -68,27 +77,18 @@
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
             text-align: center;
         }
-        .review-section {
-            font-family: 'Montserrat', sans-serif;
-            color: black;
-            font-size: 26px;
-            font-weight: bold;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .review-section::after {
-            content: " ⭐";
-        }
+
         .consultation-form {
             width: 90%;
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 30px auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
+
         .consultation-form h2 {
             background: #CC3D00;
             color: white;
@@ -97,15 +97,15 @@
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
+
         .consultation-form input {
-            width: 100%;
-            max-width: 400px;
+            width: 23%;
             padding: 10px;
-            margin: 10px auto;
-            display: block;
+            margin: 10px 1%;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         .consultation-form button {
             width: 100%;
             padding: 15px;
@@ -123,37 +123,45 @@
             color: white;
             padding: 50px 20px;
             text-align: center;
+            margin-top: 50px;
         }
+
         .bradford-section h2 {
-            font-size: 28px;
+            font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         .bradford-text {
             max-width: 1000px;
             margin: auto;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.6;
         }
 
         /* Image Slider */
         .slider {
             position: relative;
-            max-width: 90%;
+            max-width: 600px;
             margin: 30px auto;
             overflow: hidden;
             border-radius: 10px;
+            height: 350px;
         }
+
         .slides {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            width: 400%;
         }
+
         .slides img {
             width: 100%;
-            border-radius: 10px;
+            max-height: 350px;
             object-fit: cover;
-            max-height: 400px;
+            border-radius: 10px;
         }
+
         .slider-buttons {
             position: absolute;
             top: 50%;
@@ -162,6 +170,7 @@
             justify-content: space-between;
             transform: translateY(-50%);
         }
+
         .slider-buttons button {
             background: rgba(0, 0, 0, 0.6);
             color: white;
@@ -171,11 +180,11 @@
             cursor: pointer;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
             }
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -187,22 +196,14 @@
                 text-align: center;
                 padding: 10px;
             }
+
             .nav-links a {
                 display: block;
                 padding: 10px;
             }
+
             .hero-text {
-                font-size: 32px;
-            }
-            .bradford-section h2 {
-                font-size: 24px;
-            }
-            .bradford-text {
-                font-size: 14px;
-            }
-            .slider-buttons button {
-                font-size: 16px;
-                padding: 8px;
+                font-size: 36px;
             }
         }
     </style>
@@ -234,7 +235,9 @@
 
     <div class="bradford-section">
         <h2>Bradford's Premier Asphalt Sealing Company</h2>
-        <p class="bradford-text">With years of experience, Oneway Asphalt Seal provides high-quality asphalt sealing, repair, and maintenance services in Bradford.</p>
+        <p class="bradford-text">With years of experience, Oneway Asphalt Seal provides high-quality asphalt sealing, repair, and maintenance services in Bradford. 
+            We specialize in protecting and enhancing driveways with professional-grade sealants and expert craftsmanship. 
+            Our team is dedicated to delivering long-lasting solutions that improve durability and enhance curb appeal.</p>
     </div>
 
     <div class="slider">
@@ -244,5 +247,23 @@
             <img src="asphalt-sealing-before-after-4.jpg" alt="High-quality driveway sealing">
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("nav-links");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+
+        let slideIndex = 0;
+        const slides = document.querySelector(".slides");
+        const images = document.querySelectorAll(".slides img");
+
+        function showNextSlide() {
+            slideIndex = (slideIndex + 1) % images.length;
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 3000);
+    </script>
 </body>
 </html>
