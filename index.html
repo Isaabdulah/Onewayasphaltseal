@@ -60,21 +60,16 @@
             text-align: center;
             margin-top: 80px;
         }
-        .hero-text, .review-section {
+        .hero-text {
             font-family: 'Montserrat', sans-serif;
             color: white;
-            font-size: 48px;
+            font-size: 42px;
             font-weight: bold;
-            margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-            text-align: center;
-        }
-        .review-section::after {
-            content: " ⭐";
         }
         .consultation-form {
-            width: 80%;
-            max-width: 800px;
+            width: 90%;
+            max-width: 900px;
             margin: 30px auto;
             padding: 20px;
             background: white;
@@ -107,6 +102,14 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .review-section {
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
         .review-slider {
             display: flex;
             align-items: center;
@@ -134,7 +137,6 @@
             font-size: 24px;
             cursor: pointer;
             padding: 10px;
-            margin: 10px;
             background: #CC3D00;
             color: white;
             border: none;
@@ -149,38 +151,11 @@
         .right-btn {
             right: 10px;
         }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: #CC3D00;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                width: 50%;
-                text-align: center;
-                padding: 10px;
-            }
-            .nav-links a {
-                display: block;
-                padding: 10px;
-            }
-            .hero-text, .review-section {
-                font-size: 36px;
-            }
-        }
     </style>
     <script>
         function toggleMenu() {
             var nav = document.getElementById("nav-links");
-            if (nav.style.display === "block") {
-                nav.style.display = "none";
-            } else {
-                nav.style.display = "block";
-            }
+            nav.style.display = (nav.style.display === "block" ? "none" : "block");
         }
     </script>
 </head>
@@ -195,5 +170,24 @@
             <a href="estimate.html" class="cta-button">Free Estimate</a>
         </nav>
     </header>
+    <div class="hero">
+        <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
+    </div>
+    <div class="consultation-form">
+        <h2>Request a Free Consultation</h2>
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Phone Number">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Address or Major Intersection">
+        <button type="submit">Submit</button>
+    </div>
+    <div class="review-section">Google Reviews ⭐</div>
+    <section class="review-slider">
+        <button class="slider-btn left-btn" onclick="showReview(-1)">⬅</button>
+        <div class="review active-review"><img src="review1.jpg" alt="Google Review 1"></div>
+        <div class="review"><img src="review2.jpg" alt="Google Review 2"></div>
+        <div class="review"><img src="review3.jpg" alt="Google Review 3"></div>
+        <button class="slider-btn right-btn" onclick="showReview(1)">➡</button>
+    </section>
 </body>
 </html>
