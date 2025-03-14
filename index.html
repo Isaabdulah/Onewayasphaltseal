@@ -58,56 +58,39 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-top: 80px;
+        }
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
         .hero-text {
             font-family: 'Montserrat', sans-serif;
             color: white;
-            font-size: 42px;
+            font-size: 48px;
             font-weight: bold;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-        }
-        .consultation-form {
-            width: 90%;
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
-        .consultation-form h2 {
+        .estimate-button {
+            display: none;
             background: #CC3D00;
             color: white;
-            padding: 15px;
-            font-size: 24px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        .consultation-form input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+            padding: 15px 25px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
             border-radius: 5px;
-        }
-        .consultation-form button {
-            width: 100%;
-            padding: 15px;
-            background: #CC3D00;
-            color: white;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
         }
         .review-section {
-            font-family: 'Montserrat', sans-serif;
-            color: black;
             font-size: 26px;
-            font-weight: bold;
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
             margin-top: 20px;
         }
         .review-slider {
@@ -137,6 +120,7 @@
             font-size: 24px;
             cursor: pointer;
             padding: 10px;
+            margin: 10px;
             background: #CC3D00;
             color: white;
             border: none;
@@ -151,13 +135,33 @@
         .right-btn {
             right: 10px;
         }
-    </style>
-    <script>
-        function toggleMenu() {
-            var nav = document.getElementById("nav-links");
-            nav.style.display = (nav.style.display === "block" ? "none" : "block");
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(204, 61, 0, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 50%;
+                text-align: center;
+                padding: 10px;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+            .hero-text {
+                font-size: 32px;
+            }
+            .estimate-button {
+                display: block;
+            }
         }
-    </script>
+    </style>
 </head>
 <body>
     <header>
@@ -171,23 +175,9 @@
         </nav>
     </header>
     <div class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
+        <a href="estimate.html" class="estimate-button">Free Estimate</a>
     </div>
-    <div class="consultation-form">
-        <h2>Request a Free Consultation</h2>
-        <input type="text" placeholder="Full Name">
-        <input type="text" placeholder="Phone Number">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Address or Major Intersection">
-        <button type="submit">Submit</button>
-    </div>
-    <div class="review-section">Google Reviews ⭐</div>
-    <section class="review-slider">
-        <button class="slider-btn left-btn" onclick="showReview(-1)">⬅</button>
-        <div class="review active-review"><img src="review1.jpg" alt="Google Review 1"></div>
-        <div class="review"><img src="review2.jpg" alt="Google Review 2"></div>
-        <div class="review"><img src="review3.jpg" alt="Google Review 3"></div>
-        <button class="slider-btn right-btn" onclick="showReview(1)">➡</button>
-    </section>
 </body>
 </html>
