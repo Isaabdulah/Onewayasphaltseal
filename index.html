@@ -47,7 +47,7 @@
             font-size: 25px;
             cursor: pointer;
         }
-
+        
         /* Hero Section */
         .hero {
             position: relative;
@@ -68,7 +68,59 @@
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Bradford's Premier Section */
+        .bradford-section {
+            background: #CC3D00;
+            color: white;
+            padding: 50px 20px;
             text-align: center;
+            margin-top: 50px;
+        }
+        .bradford-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .bradford-text {
+            max-width: 1000px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            max-width: 1000px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .slider-buttons button {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
         }
 
         /* Consultation Form */
@@ -108,61 +160,15 @@
             cursor: pointer;
         }
 
-        /* Bradford Section */
-        .bradford-section {
-            background: #1E5128;
+        /* Footer */
+        footer {
+            background: #333;
             color: white;
-            padding: 50px 20px;
             text-align: center;
+            padding: 20px;
             margin-top: 50px;
         }
-        .bradford-section h2 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .bradford-text {
-            max-width: 1000px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
-        }
 
-        /* Image Slider - Click Based */
-        .slider {
-            position: relative;
-            max-width: 800px;
-            margin: 30px auto;
-            overflow: hidden;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .slides img {
-            width: 100%;
-            height: auto;
-            display: none;
-        }
-        .slides img.active {
-            display: block;
-        }
-        .slider-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .slider-buttons button {
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -201,10 +207,30 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
     </div>
 
+    <!-- Bradford's Premier Asphalt Sealing Company -->
+    <div class="bradford-section">
+        <h2>Bradford's Premier Asphalt Sealing Company</h2>
+        <p>With years of experience, Oneway Asphalt Seal provides high-quality asphalt sealing, repair, and maintenance services in Bradford. 
+            We specialize in protecting and enhancing driveways with professional-grade sealants and expert craftsmanship. 
+            Our team is dedicated to delivering long-lasting solutions that improve durability and enhance curb appeal.</p>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="asphalt-sealing-before-after-1.jpg" alt="Before and after asphalt sealing">
+            <img src="asphalt-sealing-before-after-2.jpg" alt="Driveway sealing service in Bradford">
+            <img src="asphalt-sealing-before-after-3.jpg" alt="Asphalt repair and sealing comparison">
+            <img src="asphalt-sealing-before-after-4.jpg" alt="High-quality driveway sealing">
+        </div>
+    </div>
+
+    <!-- Consultation Form -->
     <div class="consultation-form">
         <h2>Request a Free Consultation</h2>
         <input type="text" placeholder="Full Name">
@@ -214,47 +240,10 @@
         <button type="submit">Submit</button>
     </div>
 
-    <div class="bradford-section">
-        <h2>Bradford's Premier Asphalt Sealing Company</h2>
-        <p class="bradford-text">
-            With years of experience, Oneway Asphalt Seal provides high-quality asphalt sealing, repair, and maintenance services in Bradford. 
-            We specialize in protecting and enhancing driveways with professional-grade sealants and expert craftsmanship. 
-            Our team is dedicated to delivering long-lasting solutions that improve durability and enhance curb appeal.
-        </p>
-    </div>
-
-    <div class="slider">
-        <div class="slides">
-            <img src="asphalt-sealing-before-after-1.jpg" class="active" alt="Before and after asphalt sealing">
-            <img src="asphalt-sealing-before-after-2.jpg" alt="Driveway sealing service in Bradford">
-            <img src="asphalt-sealing-before-after-3.jpg" alt="Asphalt repair and sealing comparison">
-            <img src="asphalt-sealing-before-after-4.jpg" alt="High-quality driveway sealing">
-        </div>
-        <div class="slider-buttons">
-            <button onclick="prevSlide()">❮</button>
-            <button onclick="nextSlide()">❯</button>
-        </div>
-    </div>
-
-    <script>
-        let index = 0;
-        const slides = document.querySelectorAll('.slides img');
-
-        function showSlide(n) {
-            slides.forEach(img => img.classList.remove('active'));
-            slides[n].classList.add('active');
-        }
-
-        function nextSlide() {
-            index = (index + 1) % slides.length;
-            showSlide(index);
-        }
-
-        function prevSlide() {
-            index = (index - 1 + slides.length) % slides.length;
-            showSlide(index);
-        }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
