@@ -18,7 +18,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background: rgba(0, 0, 0, 0.5);
+            background: #CC3D00;
             color: white;
             padding: 15px 20px;
             font-size: 20px;
@@ -58,22 +58,15 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            margin-top: 80px;
         }
-        .hero-text {
+        .hero-text, .review-section {
             font-family: 'Montserrat', sans-serif;
             color: white;
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-            text-align: center;
-        }
-        .review-section {
-            font-family: 'Montserrat', sans-serif;
-            color: black;
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 20px;
             text-align: center;
         }
         .review-section::after {
@@ -163,7 +156,7 @@
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background: rgba(0, 0, 0, 0.9);
+                background: #CC3D00;
                 position: absolute;
                 top: 60px;
                 right: 0;
@@ -175,11 +168,21 @@
                 display: block;
                 padding: 10px;
             }
-            .hero-text {
+            .hero-text, .review-section {
                 font-size: 36px;
             }
         }
     </style>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav-links");
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -192,24 +195,5 @@
             <a href="estimate.html" class="cta-button">Free Estimate</a>
         </nav>
     </header>
-    <div class="hero">
-        <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
-    </div>
-    <div class="consultation-form">
-        <h2>Request a Free Consultation</h2>
-        <input type="text" placeholder="Full Name">
-        <input type="text" placeholder="Phone Number">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Address or Major Intersection">
-        <button type="submit">Submit</button>
-    </div>
-    <div class="review-section">Google Reviews</div>
-    <section class="review-slider">
-        <button class="slider-btn left-btn" onclick="showReview(-1)">⬅</button>
-        <div class="review active-review"><img src="review1.jpg" alt="Google Review 1"></div>
-        <div class="review"><img src="review2.jpg" alt="Google Review 2"></div>
-        <div class="review"><img src="review3.jpg" alt="Google Review 3"></div>
-        <button class="slider-btn right-btn" onclick="showReview(1)">➡</button>
-    </section>
 </body>
 </html>
