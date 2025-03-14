@@ -180,5 +180,29 @@
         <input type="text" placeholder="Address or Major Intersection">
         <button type="submit">Submit</button>
     </div>
+     <!-- New Section -->
+    <div class="about-section">
+        <div class="about-text">
+            <h2>Bradford’s Premier Asphalt Sealing Company</h2>
+            <p>With years of experience, Oneway Asphalt Seal provides high-quality asphalt sealing, repair, and maintenance services. We specialize in protecting and enhancing your driveway with professional-grade sealants and expert craftsmanship. Our team is dedicated to delivering long-lasting solutions that improve the durability and appearance of your asphalt surfaces.</p>
+        </div>
+        <div class="about-slider">
+            <img src="image1.jpg" class="active" alt="Asphalt Sealing">
+            <img src="image2.jpg" alt="Driveway Repair">
+            <img src="image3.jpg" alt="Finished Asphalt Surface">
+        </div>
+    </div>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.about-slider img');
+        
+        function showNextSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        setInterval(showNextSlide, 3000); // Change image every 3 seconds
+    </script>
 </body>
 </html>
