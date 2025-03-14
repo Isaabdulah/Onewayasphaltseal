@@ -50,7 +50,7 @@
         .hero {
             position: relative;
             width: 100%;
-            height: 550px;
+            height: 650px; /* Increased height */
             background: url('background.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
@@ -58,6 +58,16 @@
             justify-content: center;
             text-align: center;
             margin-top: 80px;
+        }
+        /* Overlay to reduce brightness */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Darker overlay */
         }
         .hero-text {
             font-family: 'Montserrat', sans-serif;
@@ -67,6 +77,8 @@
             margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
             text-align: center;
+            position: relative; /* Ensure text is on top */
+            z-index: 1;
         }
         .review-section {
             font-family: 'Montserrat', sans-serif;
@@ -80,38 +92,39 @@
             content: " ⭐";
         }
         .consultation-form {
-            width: 90%;
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
+            width: 95%; /* Increased width */
+            max-width: 1200px; /* Adjusted to be wider */
+            margin: 40px auto;
+            padding: 25px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
         .consultation-form h2 {
             background: #CC3D00;
             color: white;
-            padding: 15px;
-            font-size: 24px;
+            padding: 18px;
+            font-size: 26px;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
         .consultation-form input {
-            width: 23%;
-            padding: 10px;
-            margin: 10px 1%;
+            width: 24%;
+            padding: 12px;
+            margin: 12px 1%;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 16px;
         }
         .consultation-form button {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             background: #CC3D00;
             color: white;
-            font-size: 18px;
+            font-size: 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
         }
         @media (max-width: 768px) {
@@ -135,6 +148,12 @@
             }
             .hero-text {
                 font-size: 36px;
+            }
+            .consultation-form {
+                width: 90%;
+            }
+            .consultation-form input {
+                width: 100%;
             }
         }
     </style>
