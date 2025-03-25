@@ -105,6 +105,7 @@
         .slides img {
             width: 100%;
             border-radius: 10px;
+            flex-shrink: 0;
         }
         .slider-buttons {
             position: absolute;
@@ -191,6 +192,10 @@
             .hero-text {
                 font-size: 36px;
             }
+            .consultation-form input {
+                width: 90%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -220,13 +225,17 @@
             Our team is dedicated to delivering long-lasting solutions that improve durability and enhance curb appeal.</p>
     </div>
 
-    <!-- Image Slider -->
+    <!-- Image Slider with Buttons -->
     <div class="slider">
-        <div class="slides">
+        <div class="slides" id="slides">
             <img src="asphalt-sealing-before-after-1.jpg" alt="Before and after asphalt sealing">
             <img src="asphalt-sealing-before-after-2.jpg" alt="Driveway sealing service in Bradford">
             <img src="asphalt-sealing-before-after-3.jpg" alt="Asphalt repair and sealing comparison">
             <img src="asphalt-sealing-before-after-4.jpg" alt="High-quality driveway sealing">
+        </div>
+        <div class="slider-buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
         </div>
     </div>
 
@@ -244,6 +253,34 @@
     <footer>
         <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("nav-links");
+            nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+        }
+
+        let currentIndex = 0;
+        const slides = document.getElementById("slides");
+        const totalSlides = slides.children.length;
+
+        function showSlide(index) {
+            const slideWidth = slides.children[0].clientWidth;
+            slides.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        window.addEventListener('resize', () => showSlide(currentIndex));
+    </script>
 
 </body>
 </html>
