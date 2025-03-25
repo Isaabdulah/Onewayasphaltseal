@@ -3,11 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Oneway Asphalt Seal - 15 Years of Driveway Sealing & Asphalt Repair Expertise">
     <title>About Us - Oneway Asphalt Seal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #CC3D00;
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .about-section {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .about-section h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #CC3D00;
+        }
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(204, 61, 0, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 50%;
+                text-align: center;
+                padding: 10px;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>About Us</h1>
-    <p>We have 15 years of experience in driveway sealing and asphalt repair.</p>
-    <a href="index.html">Back to Home</a>
+
+    <header>
+        <div class="logo"><img src="IMG_1441.PNG" alt="Logo"></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="estimate.html">Free Estimate</a>
+        </nav>
+    </header>
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>With over 15 years of experience, Oneway Asphalt Seal is proud to serve Bradford and surrounding areas with professional driveway sealing, asphalt repair, and power washing services. We are committed to quality, reliability, and customer satisfaction — protecting your driveway and enhancing curb appeal with every project.</p>
+    </div>
+
+    <footer>
+        <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("nav-links");
+            nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
 </body>
 </html>
