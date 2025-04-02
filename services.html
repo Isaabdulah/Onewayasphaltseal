@@ -151,7 +151,7 @@
         </div>
       </div>
     </div>
-    <!-- Interlock and Interlock Repair -->
+    <!-- Interlock Repair -->
     <div class="service-card">
       <h3>Interlock & Interlock Repair</h3>
       <p>Whether you're looking to install new interlock or repair existing stonework, we offer expert craftsmanship that enhances curb appeal and functionality. We handle leveling, re-sanding, lifting, and resetting interlock to make it look brand new.</p>
@@ -165,6 +165,21 @@
         <div class="slider-buttons">
           <button onclick="prevInterlockSlide()">❮</button>
           <button onclick="nextInterlockSlide()">❯</button>
+        </div>
+      </div>
+    </div>
+    <!-- Custom Work -->
+    <div class="service-card">
+      <h3>Custom Work & Small Projects</h3>
+      <p>From small patch jobs to concrete cleaning and custom requests, we help with those little extras that improve your property's function and appearance. Perfect for edge detailing, minor touch-ups, and prep work before sealing or repairs.</p>
+      <div class="service-slider">
+        <div class="service-slides" id="customSlides">
+          <img src="custom-asphalt-curb-detail.jpg" alt="Detailed asphalt curb edge sealing small project">
+          <img src="small-job-concrete-cleaning.jpg" alt="Concrete surface power washing small job before sealing">
+        </div>
+        <div class="slider-buttons">
+          <button onclick="prevCustomSlide()">❮</button>
+          <button onclick="nextCustomSlide()">❯</button>
         </div>
       </div>
     </div>
@@ -182,75 +197,42 @@
     const nav = document.getElementById("nav-links");
     nav.style.display = nav.style.display === "flex" ? "none" : "flex";
   }
-  // Driveway Slider
-  let drivewayIndex = 0;
-  const drivewaySlides = document.getElementById("drivewaySlides");
-  const totalDriveway = drivewaySlides.children.length;
-  function showDrivewaySlide(index) {
-    const width = drivewaySlides.children[0].clientWidth;
-    drivewaySlides.style.transform = `translateX(-${index * width}px)`;
+  // Slider Functions
+  function createSlider(id) {
+    let index = 0;
+    const slides = document.getElementById(id);
+    const total = slides.children.length;
+    function show(i) {
+      const width = slides.children[0].clientWidth;
+      slides.style.transform = `translateX(-${i * width}px)`;
+    }
+    return {
+      next: () => { index = (index + 1) % total; show(index); },
+      prev: () => { index = (index - 1 + total) % total; show(index); },
+      init: () => show(index)
+    };
   }
-  function nextDrivewaySlide() {
-    drivewayIndex = (drivewayIndex + 1) % totalDriveway;
-    showDrivewaySlide(drivewayIndex);
-  }
-  function prevDrivewaySlide() {
-    drivewayIndex = (drivewayIndex - 1 + totalDriveway) % totalDriveway;
-    showDrivewaySlide(drivewayIndex);
-  }
-  // Asphalt Slider
-  let asphaltIndex = 0;
-  const asphaltSlides = document.getElementById("asphaltSlides");
-  const totalAsphalt = asphaltSlides.children.length;
-  function showAsphaltSlide(index) {
-    const width = asphaltSlides.children[0].clientWidth;
-    asphaltSlides.style.transform = `translateX(-${index * width}px)`;
-  }
-  function nextAsphaltSlide() {
-    asphaltIndex = (asphaltIndex + 1) % totalAsphalt;
-    showAsphaltSlide(asphaltIndex);
-  }
-  function prevAsphaltSlide() {
-    asphaltIndex = (asphaltIndex - 1 + totalAsphalt) % totalAsphalt;
-    showAsphaltSlide(asphaltIndex);
-  }
-  // Power Washing Slider
-  let powerIndex = 0;
-  const powerSlides = document.getElementById("powerSlides");
-  const totalPower = powerSlides.children.length;
-  function showPowerSlide(index) {
-    const width = powerSlides.children[0].clientWidth;
-    powerSlides.style.transform = `translateX(-${index * width}px)`;
-  }
-  function nextPowerSlide() {
-    powerIndex = (powerIndex + 1) % totalPower;
-    showPowerSlide(powerIndex);
-  }
-  function prevPowerSlide() {
-    powerIndex = (powerIndex - 1 + totalPower) % totalPower;
-    showPowerSlide(powerIndex);
-  }
-  // Interlock Slider
-  let interlockIndex = 0;
-  const interlockSlides = document.getElementById("interlockSlides");
-  const totalInterlock = interlockSlides.children.length;
-  function showInterlockSlide(index) {
-    const width = interlockSlides.children[0].clientWidth;
-    interlockSlides.style.transform = `translateX(-${index * width}px)`;
-  }
-  function nextInterlockSlide() {
-    interlockIndex = (interlockIndex + 1) % totalInterlock;
-    showInterlockSlide(interlockIndex);
-  }
-  function prevInterlockSlide() {
-    interlockIndex = (interlockIndex - 1 + totalInterlock) % totalInterlock;
-    showInterlockSlide(interlockIndex);
-  }
-  window.addEventListener("resize", () => {
-    showDrivewaySlide(drivewayIndex);
-    showAsphaltSlide(asphaltIndex);
-    showPowerSlide(powerIndex);
-    showInterlockSlide(interlockIndex);
+  const driveway = createSlider('drivewaySlides');
+  const asphalt = createSlider('asphaltSlides');
+  const power = createSlider('powerSlides');
+  const interlock = createSlider('interlockSlides');
+  const custom = createSlider('customSlides');
+  function nextDrivewaySlide() { driveway.next(); }
+  function prevDrivewaySlide() { driveway.prev(); }
+  function nextAsphaltSlide() { asphalt.next(); }
+  function prevAsphaltSlide() { asphalt.prev(); }
+  function nextPowerSlide() { power.next(); }
+  function prevPowerSlide() { power.prev(); }
+  function nextInterlockSlide() { interlock.next(); }
+  function prevInterlockSlide() { interlock.prev(); }
+  function nextCustomSlide() { custom.next(); }
+  function prevCustomSlide() { custom.prev(); }
+  window.addEventListener('resize', () => {
+    driveway.init();
+    asphalt.init();
+    power.init();
+    interlock.init();
+    custom.init();
   });
 </script>
 </body>
