@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Oneway Asphalt Seal in Bradford for driveway sealing, asphalt repair, and power washing services.">
+  <title>Contact Us - Oneway Asphalt Seal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
+    header {
+      background: #CC3D00;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo img { height: 50px; }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .section {
+      max-width: 800px;
+      margin: 120px auto 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .section h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: #CC3D00;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contact-details {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact-details p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+    .contact-details a {
+      color: #CC3D00;
+      text-decoration: none;
+    }
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-icons a {
+      color: #CC3D00;
+      font-size: 22px;
+      text-decoration: none;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      background: #CC3D00;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #b73700;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(204, 61, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+      }
+      .nav-links a { display: block; padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="IMG_1441.PNG" alt="Oneway Asphalt Seal Logo"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="estimate.html">Free Estimate</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h1>Contact Us</h1>
+    <div class="contact-details">
+      <p><strong>Phone:</strong> <a href="tel:+16474255012">647-425-5012</a></p>
+      <p><strong>Email:</strong> <a href="mailto:onewaysealing@gmail.com">onewaysealing@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/onewayseal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <!-- Facebook will go here -->
+      </div>
+    </div>
+
+    <form action="mailto:onewaysealing@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone (optional)" />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>
