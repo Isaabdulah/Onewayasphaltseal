@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Get professional asphalt driveway sealing in Bradford with Oneway Asphalt Seal. Affordable, reliable, and fast. Free estimates available.">
-  <meta name="keywords" content="driveway sealing Bradford, asphalt sealing, asphalt driveway sealing, asphalt repair, power washing, Oneway Asphalt Seal, driveway sealing near me">
-  <title>Driveway Sealing Bradford | Oneway Asphalt Seal</title>
+  <title>Driveway Sealing Bradford | Asphalt Seal and Asphalt Repair</title>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W9H3692CY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,8 +13,9 @@
     gtag('js', new Date());
     gtag('config', 'G-8W9H3692CY');
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
     header {
@@ -31,17 +32,26 @@
       z-index: 1000;
     }
     .logo img { height: 50px; }
-    .nav-links { display: flex; gap: 20px; }
-    .nav-links a {
-      text-decoration: none; color: white;
-      padding: 10px 15px; border-radius: 5px;
+    .nav-links {
+      display: flex;
+      gap: 20px;
     }
-    .menu-toggle { display: none; font-size: 25px; cursor: pointer; }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
     .hero {
       position: relative;
       width: 100%;
       height: 550px;
-      background: url('background.jpg') no-repeat center center/cover;
+      background: url('driveway-sealing-bradford-home-hero.jpg') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -56,6 +66,18 @@
       font-weight: bold;
       margin-bottom: 20px;
       text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    }
+    .social-icons {
+      margin-top: 15px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 28px;
+      margin: 0 15px;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
     }
 
     .bradford-section {
@@ -151,7 +173,9 @@
       margin-top: 50px;
     }
     @media (max-width: 768px) {
-      .menu-toggle { display: block; }
+      .menu-toggle {
+        display: block;
+      }
       .nav-links {
         display: none;
         flex-direction: column;
@@ -163,8 +187,13 @@
         text-align: center;
         padding: 10px;
       }
-      .nav-links a { display: block; padding: 10px; }
-      .hero-text { font-size: 36px; }
+      .nav-links a {
+        display: block;
+        padding: 10px;
+      }
+      .hero-text {
+        font-size: 36px;
+      }
       .consultation-form input {
         width: 90%;
         margin: 10px 0;
@@ -186,6 +215,11 @@
   <!-- Hero Section -->
   <div class="hero">
     <div class="hero-text">Professional Driveway Sealing & Asphalt Repair</div>
+    <div class="social-icons">
+      <a href="https://wa.me/16474255012" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/onewayseal" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
   </div>
   <!-- Bradford Section -->
   <div class="bradford-section">
@@ -216,7 +250,6 @@
     <input type="text" placeholder="Address or Major Intersection">
     <button type="submit">Submit</button>
   </div>
-  <!-- Footer -->
   <footer>
     <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
   </footer>
@@ -228,6 +261,7 @@
     let currentIndex = 0;
     const slides = document.getElementById("slides");
     const totalSlides = slides.children.length;
+
     function showSlide(index) {
       const slideWidth = slides.children[0].clientWidth;
       slides.style.transform = `translateX(-${index * slideWidth}px)`;
