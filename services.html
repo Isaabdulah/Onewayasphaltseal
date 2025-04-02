@@ -179,6 +179,7 @@
   <section class="section">
     <h1>Our Services</h1>
     <div class="services-grid">
+
       <!-- Driveway Sealing -->
       <div class="service-card">
         <h3>Driveway Sealing</h3>
@@ -217,7 +218,19 @@
       <div class="service-card">
         <h3>Power Washing</h3>
         <p>We offer residential power washing services to clean driveways, patios, walkways, and more. Remove dirt, oil stains, algae, and buildup for a clean, refreshed look before sealing.</p>
+        <div class="service-slider">
+          <div class="service-slides" id="powerSlides">
+            <img src="power-washing-pressure-cleaning-tiles.jpg" alt="Pressure washing dirty tiles with visible clean lines">
+            <img src="power-washing-curved-driveway-before-after.jpg" alt="Before and after of curved driveway power washing">
+            <img src="power-washing-commercial-entrance-clean.jpg" alt="Power washing commercial concrete entrance area">
+          </div>
+          <div class="slider-buttons">
+            <button onclick="prevPowerSlide()">❮</button>
+            <button onclick="nextPowerSlide()">❯</button>
+          </div>
+        </div>
       </div>
+
     </div>
 
     <div class="cta">
@@ -270,9 +283,27 @@
       showAsphaltSlide(asphaltIndex);
     }
 
+    // Power Washing Slider
+    let powerIndex = 0;
+    const powerSlides = document.getElementById("powerSlides");
+    const totalPower = powerSlides.children.length;
+    function showPowerSlide(index) {
+      const width = powerSlides.children[0].clientWidth;
+      powerSlides.style.transform = `translateX(-${index * width}px)`;
+    }
+    function nextPowerSlide() {
+      powerIndex = (powerIndex + 1) % totalPower;
+      showPowerSlide(powerIndex);
+    }
+    function prevPowerSlide() {
+      powerIndex = (powerIndex - 1 + totalPower) % totalPower;
+      showPowerSlide(powerIndex);
+    }
+
     window.addEventListener("resize", () => {
       showDrivewaySlide(drivewayIndex);
       showAsphaltSlide(asphaltIndex);
+      showPowerSlide(powerIndex);
     });
   </script>
 </body>
