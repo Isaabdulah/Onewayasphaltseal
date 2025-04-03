@@ -210,5 +210,59 @@
     </div>
   </div>
 </section>
+<section class="section">
+  <h1>About OnewaySeal</h1>
+  <p>With over 15 years of hands-on experience, OnewaySeal proudly serves Bradford and surrounding areas with premium asphalt sealing, driveway repair, and power washing services. Our commitment to quality and customer satisfaction sets us apart.</p>
+</section>
+<section class="section">
+  <h2>Our Mission</h2>
+  <p>Our mission is to protect and enhance the value of your property by delivering expert asphalt services using top-quality materials and trusted techniques.</p>
+</section>
+<section class="section">
+  <h2>Our Story</h2>
+  <p>OnewaySeal was founded by Mike, who started the company from scratch with nothing more than a sealant sprayer, a pickup truck, and a determination to offer better driveway services to homeowners. What started as a solo operation has grown into a trusted name in the community for reliability, value, and professionalism.</p>
+</section>
+<section class="section">
+  <h2>Why Choose Us?</h2>
+  <div class="why-choose-us">
+    <ul>
+      <li>15+ Years of Industry Experience</li>
+      <li>Locally Owned & Operated in Bradford</li>
+      <li>Professional-Grade Sealants</li>
+      <li>Reliable, Friendly & Skilled Crew</li>
+      <li>Fast, Free Estimates</li>
+      <li>Affordable, Transparent Pricing</li>
+    </ul>
+  </div>
+</section>
+<section class="section" style="text-align: center;">
+  <h2>Ready to Protect Your Driveway?</h2>
+  <p><a href="estimate.html" style="color: #CC3D00; font-weight: bold;">Get a Free Estimate Today →</a></p>
+</section>
+<footer>
+  <p>© 2025 OnewaySeal. All Rights Reserved.</p>
+</footer>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  }
+  let currentTestimonial = 0;
+  const testimonials = document.getElementById("testimonial-wrapper");
+  const totalTestimonials = testimonials.children.length;
+  function showTestimonial(index) {
+    const width = testimonials.children[0].clientWidth;
+    testimonials.style.transform = `translateX(-${index * width}px)`;
+  }
+  function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+    showTestimonial(currentTestimonial);
+  }
+  function prevTestimonial() {
+    currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+    showTestimonial(currentTestimonial);
+  }
+  window.addEventListener("resize", () => showTestimonial(currentTestimonial));
+</script>
 </body>
 </html>
