@@ -53,7 +53,7 @@
     }
     .logo img { height: 50px; }
     .nav-links {
-      display: flex; gap: 20px;
+      display: flex; gap: 20px; align-items: center;
     }
     .nav-links a {
       text-decoration: none; color: white;
@@ -100,6 +100,22 @@
       color: #333;
       font-size: 16px;
       font-weight: bold;
+    }
+    .floating-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #CC3D00;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 22px;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .floating-chat:hover {
+      transform: scale(1.1);
     }
     .bradford-section {
       background: #CC3D00; color: white;
@@ -188,6 +204,8 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="estimate.html" class="cta-button">Free Estimate</a>
+      <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
     </nav>
   </header>
   <!-- Hero Section -->
@@ -232,6 +250,10 @@
     <input type="text" placeholder="Address or Major Intersection">
     <a href="sms:+16474255012"><button type="button">Text Us to Get Started</button></a>
   </div>
+  <!-- Floating Message Button -->
+  <a href="sms:+16474255012" class="floating-chat" title="Text Us">
+    <i class="fas fa-comment-dots"></i>
+  </a>
   <footer>
     <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
   </footer>
