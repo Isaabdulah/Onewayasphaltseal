@@ -17,39 +17,17 @@
   <meta name="twitter:title" content="Driveway Sealing & Asphalt Repair - OnewaySeal">
   <meta name="twitter:description" content="Asphalt sealing, repair, and restoration in Bradford. Affordable, fast, reliable. Text for a free estimate.">
   <meta name="twitter:image" content="https://www.onewayseal.ca/images/home-preview.jpg">
-  <!-- Local Business Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "OnewaySeal",
-    "image": "https://www.onewayseal.ca/images/home-preview.jpg",
-    "url": "https://www.onewayseal.ca",
-    "telephone": "+1-647-425-5012",
-    "email": "onewaysealing@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bradford",
-      "addressRegion": "ON",
-      "addressCountry": "Canada"
-    },
-    "description": "Driveway sealing, asphalt repair, power washing, and restoration services in Bradford, Innisfil, Markham, Newmarket, Thornhill, and Brampton.",
-    "sameAs": [
-      "https://www.instagram.com/onewayseal",
-      "https://www.facebook.com/profile.php?id=61574799488543",
-      "https://wa.me/16474255012"
-    ]
-  }
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
     header {
-      background: #CC3D00; color: white; padding: 15px 20px;
-      font-size: 20px; display: flex; justify-content: space-between;
-      align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000;
+      background: #CC3D00; color: white;
+      padding: 15px 20px;
+      font-size: 20px; display: flex;
+      justify-content: space-between; align-items: center;
+      position: fixed; width: 100%; top: 0; z-index: 1000;
     }
     .logo img { height: 50px; }
     .nav-links {
@@ -64,7 +42,7 @@
     }
     .hero {
       position: relative; width: 100%; height: 550px;
-      background: url('driveway-sealing-bradford-home-hero.jpg') no-repeat center center/cover;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('driveway-sealing-bradford-home-hero.jpg') no-repeat center center/cover;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center; margin-top: 80px;
@@ -72,41 +50,46 @@
     .hero-text {
       font-family: 'Montserrat', sans-serif;
       color: white; font-size: 48px;
-      font-weight: bold; margin-bottom: 10px;
-      text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+      font-weight: bold; margin-bottom: 15px;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     }
-    .icon-card {
-      background: white;
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      margin-top: 10px;
-    }
-    .icon-card .social-icons {
+    .social-icons {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-bottom: 8px;
     }
-    .icon-card .social-icons a {
+    .social-icons a {
       font-size: 28px; text-decoration: none;
     }
     .fa-whatsapp { color: #25D366; }
     .fa-comment-dots { color: #007AFF; }
     .fa-instagram { color: #C13584; }
     .fa-facebook { color: #1877F2; }
-    .icon-card .contact-label {
-      color: #333;
-      font-size: 16px;
+    .google-review-badge {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .google-review-badge a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
       font-weight: bold;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .google-review-badge img {
+      width: 24px;
+      height: 24px;
     }
     .floating-chat {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #CC3D00;
-      color: white;
+      background: white;
+      color: #CC3D00;
       padding: 15px;
       border-radius: 50%;
       font-size: 22px;
@@ -125,10 +108,6 @@
     .bradford-section h2 {
       font-size: 36px; font-weight: bold; margin-bottom: 20px;
     }
-    .bradford-text {
-      max-width: 1000px; margin: auto;
-      font-size: 18px; line-height: 1.6;
-    }
     .slider {
       position: relative; max-width: 1000px;
       margin: 30px auto; overflow: hidden; border-radius: 10px;
@@ -145,7 +124,7 @@
       justify-content: space-between; transform: translateY(-50%);
     }
     .slider-buttons button {
-      background: rgba(0,0,0,0.6); color: white;
+      background: rgba(0, 0, 0, 0.6); color: white;
       border: none; padding: 10px 15px;
       font-size: 18px; cursor: pointer;
     }
@@ -203,22 +182,25 @@
       <a href="about.html">About Us</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
-      <a href="estimate.html" class="cta-button">Free Estimate</a>
-      <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="estimate.html">Free Estimate</a>
+      <a href="https://wa.me/16474255012" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank"><i class="fab fa-facebook"></i></a>
     </nav>
   </header>
   <!-- Hero Section -->
   <div class="hero">
     <h1 class="hero-text">Professional Driveway Sealing & Asphalt Repair</h1>
-    <div class="icon-card">
-      <div class="social-icons">
-        <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="sms:+16474255012" target="_blank" title="iMessage"><i class="fas fa-comment-dots"></i></a>
-        <a href="https://www.instagram.com/onewayseal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      </div>
-      <div class="contact-label">Contact Us & Check Our Social Media Pages</div>
+    <div class="social-icons">
+      <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="sms:+16474255012" target="_blank" title="iMessage"><i class="fas fa-comment-dots"></i></a>
+      <a href="https://www.instagram.com/onewayseal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="google-review-badge">
+      <a href="https://www.google.com/search?q=oneway+seal+bradford+reviews" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Reviews" />
+        <span>Check Our Google Reviews</span>
+      </a>
     </div>
   </div>
   <!-- Bradford Section -->
@@ -250,7 +232,7 @@
     <input type="text" placeholder="Address or Major Intersection">
     <a href="sms:+16474255012"><button type="button">Text Us to Get Started</button></a>
   </div>
-  <!-- Floating Message Button -->
+  <!-- Floating Button -->
   <a href="sms:+16474255012" class="floating-chat" title="Text Us">
     <i class="fas fa-comment-dots"></i>
   </a>
