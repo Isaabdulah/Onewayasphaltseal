@@ -17,7 +17,6 @@
   <meta name="twitter:title" content="Driveway Sealing & Asphalt Repair - OnewaySeal">
   <meta name="twitter:description" content="Asphalt sealing, repair, and restoration in Bradford. Affordable, fast, reliable. Text for a free estimate.">
   <meta name="twitter:image" content="https://www.onewayseal.ca/images/home-preview.jpg">
-
   <!-- Local Business Schema -->
   <script type="application/ld+json">
   {
@@ -42,7 +41,6 @@
     ]
   }
   </script>
-  <!-- Styles & Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
@@ -77,21 +75,31 @@
       font-weight: bold; margin-bottom: 10px;
       text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
     }
-    .social-icons {
-      display: flex; justify-content: center;
-      gap: 20px; margin-top: 10px;
+    .icon-card {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      margin-top: 10px;
     }
-    .social-icons a {
+    .icon-card .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 8px;
+    }
+    .icon-card .social-icons a {
       font-size: 28px; text-decoration: none;
     }
     .fa-whatsapp { color: #25D366; }
     .fa-comment-dots { color: #007AFF; }
     .fa-instagram { color: #C13584; }
     .fa-facebook { color: #1877F2; }
-    .contact-label {
-      color: white;
+    .icon-card .contact-label {
+      color: #333;
       font-size: 16px;
-      margin-top: 8px;
+      font-weight: bold;
     }
     .bradford-section {
       background: #CC3D00; color: white;
@@ -185,13 +193,15 @@
   <!-- Hero Section -->
   <div class="hero">
     <h1 class="hero-text">Professional Driveway Sealing & Asphalt Repair</h1>
-    <div class="social-icons">
-      <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="sms:+16474255012" target="_blank" title="iMessage"><i class="fas fa-comment-dots"></i></a>
-      <a href="https://www.instagram.com/onewayseal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <div class="icon-card">
+      <div class="social-icons">
+        <a href="https://wa.me/16474255012" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="sms:+16474255012" target="_blank" title="iMessage"><i class="fas fa-comment-dots"></i></a>
+        <a href="https://www.instagram.com/onewayseal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="contact-label">Contact Us & Check Our Social Media Pages</div>
     </div>
-    <div class="contact-label">Contact Us & Check Our Social Media Pages</div>
   </div>
   <!-- Bradford Section -->
   <div class="bradford-section">
@@ -233,7 +243,6 @@
     let currentIndex = 0;
     const slides = document.getElementById("slides");
     const totalSlides = slides.children.length;
-
     function showSlide(index) {
       const slideWidth = slides.children[0].clientWidth;
       slides.style.transform = `translateX(-${index * slideWidth}px)`;
