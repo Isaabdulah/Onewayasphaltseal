@@ -2,17 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.onewayasphaltseal.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.onewayasphaltseal.com/services.html</loc>
+    <lastmod>2025-04-04T17:17:27+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.onewayasphaltseal.com/about.html</loc>
+    <lastmod>2025-04-04T17:17:28+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.onewayasphaltseal.com/services.html</loc>
+    <lastmod>2025-04-04T17:17:28+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.onewayasphaltseal.com/contact.html</loc>
+    <lastmod>2025-04-04T17:17:28+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.onewayasphaltseal.com/estimate.html</loc>
+    <lastmod>2025-04-04T17:17:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.onewayasphaltseal.com/index.html</loc>
+    <lastmod>2025-04-04T17:17:29+00:00</lastmod>
+    <priority>0.64</priority>
   </url>
 </urlset>
