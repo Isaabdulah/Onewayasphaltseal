@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Professional asphalt sealing, driveway repair, interlock, and power washing services in Bradford by Oneway Asphalt Seal. Quality results, affordable pricing.">
-  <meta name="keywords" content="Asphalt Sealing Bradford, Driveway Repair, Power Washing, Interlock Repair, Interlock Sealing, Asphalt Contractor, Oneway Asphalt Seal Services, Bradford Ontario">
+  <meta name="keywords" content="Asphalt Sealing Bradford, Driveway Repair, Power Washing, Interlock Repair, Asphalt Contractor, Oneway Asphalt Seal Services, Bradford Ontario">
   <meta name="author" content="Oneway Asphalt Seal">
   <meta property="og:title" content="Our Services - Oneway Asphalt Seal">
   <meta property="og:description" content="Discover our expert asphalt sealing, driveway repair, power washing, and interlock services across Bradford and surrounding areas.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.onewayasphaltseal.ca/services.html">
-  <meta property="og:image" content="https://www.onewayasphaltseal.ca/preview.jpg">
+  <meta property="og:image" content="https://www.onewayasphaltseal.ca/preview.jpg"> <!-- Replace with actual preview image -->
   <title>Our Services | Asphalt Sealing & Repairs in Bradford | Oneway Asphalt Seal</title>
   <script type="application/ld+json">
   {
@@ -30,6 +30,7 @@
     "description": "Oneway Asphalt Seal provides high-quality asphalt sealing, driveway repair, power washing, and interlock services in Bradford and nearby areas."
   }
   </script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -104,21 +105,6 @@
       border: none; padding: 8px 12px; font-size: 18px;
       cursor: pointer; border-radius: 5px;
     }
-    .floating-btns {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 9999;
-    }
-    .floating-btns a img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    }
     @media (max-width: 768px) {
       .menu-toggle { display: block; }
       .nav-links {
@@ -145,35 +131,91 @@
 <section class="section">
   <h1>Our Services</h1>
   <div class="services-grid">
-    <!-- [Your existing service cards here remain unchanged] -->
-    <!-- Interlock Sealing -->
     <div class="service-card">
-      <h2>Interlock Sealing</h2>
-      <p>Protect your interlock from wear, weeds, and weather. Our professional sealing services enhance appearance, prevent shifting, and lock in sand between stones for long-lasting results.</p>
+      <h2>Driveway Sealing</h2>
+      <p>We apply high-quality, oil-based sealants to protect your asphalt surface from cracks, weather damage, and fading. Regular sealing extends the life of your driveway and boosts curb appeal.</p>
       <div class="service-slider">
-        <div class="service-slides" id="interlockSealSlides">
-          <img src="interlock-sealing-stone-protection1.jpg" alt="Interlock sealing service enhancing stone protection in Bradford">
-          <img src="interlock-sealing-waterproof-finish2.jpg" alt="Interlock sealed surface with waterproof gloss finish">
+        <div class="service-slides" id="drivewaySlides">
+          <img src="driveway-sealing-bradford-home1.jpg" alt="Driveway sealing on luxury home in Bradford">
+          <img src="driveway-sealing-fresh-oil-seal2.jpg" alt="Fresh blacktop sealant on newly sealed driveway">
+          <img src="driveway-sealing-curb-appeal3.jpg" alt="Clean sealed asphalt driveway improving curb appeal">
         </div>
         <div class="slider-buttons">
-          <button onclick="prevInterlockSealSlide()">❮</button>
-          <button onclick="nextInterlockSealSlide()">❯</button>
+          <button onclick="prevDrivewaySlide()">❮</button>
+          <button onclick="nextDrivewaySlide()">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <h2>Asphalt Repair</h2>
+      <p>From patching potholes to filling cracks, our expert asphalt repair services restore durability and strength to your surfaces. We handle everything from small touch-ups to larger damage areas.</p>
+      <div class="service-slider">
+        <div class="service-slides" id="asphaltSlides">
+          <img src="asphalt-repair-before-after-garage.jpg" alt="Asphalt repair before and after garage entrance">
+          <img src="asphalt-repair-vibrating-plate.jpg" alt="Asphalt repair with vibrating plate machine in action">
+          <img src="asphalt-repair-compacting-finish.jpg" alt="Compact finish of asphalt repair near garage">
+        </div>
+        <div class="slider-buttons">
+          <button onclick="prevAsphaltSlide()">❮</button>
+          <button onclick="nextAsphaltSlide()">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <h2>Power Washing</h2>
+      <p>We offer residential power washing services to clean driveways, patios, walkways, and more. Remove dirt, oil stains, algae, and buildup for a clean, refreshed look before sealing.</p>
+      <div class="service-slider">
+        <div class="service-slides" id="powerSlides">
+          <img src="power-washing-pressure-cleaning-tiles.jpg" alt="Pressure washing dirty tiles with visible clean lines">
+          <img src="power-washing-curved-driveway-before-after.jpg" alt="Before and after of curved driveway power washing">
+          <img src="power-washing-commercial-entrance-clean.jpg" alt="Power washing commercial concrete entrance area">
+        </div>
+        <div class="slider-buttons">
+          <button onclick="prevPowerSlide()">❮</button>
+          <button onclick="nextPowerSlide()">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <h2>Interlock & Interlock Repair</h2>
+      <p>Whether you're looking to install new interlock or repair existing stonework, we offer expert craftsmanship that enhances curb appeal and functionality. We handle leveling, re-sanding, lifting, and resetting interlock to make it look brand new.</p>
+      <div class="service-slider">
+        <div class="service-slides" id="interlockSlides">
+          <img src="interlock-walkway-installation-before-after.jpg" alt="Walkway interlock installation showing before and after">
+          <img src="interlock-driveway-restoration-before-after.jpg" alt="Restored interlock driveway with cleaned and leveled stonework">
+          <img src="interlock-sideyard-drainage-install.jpg" alt="Sideyard with drainage and interlock installation in progress">
+          <img src="interlock-front-entrance-upgrade.jpg" alt="Front entrance interlock rebuild with curved edging and clean finish">
+        </div>
+        <div class="slider-buttons">
+          <button onclick="prevInterlockSlide()">❮</button>
+          <button onclick="nextInterlockSlide()">❯</button>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <h2>Custom Work & Small Projects</h2>
+      <p>From small patch jobs to concrete cleaning and custom requests, we help with those little extras that improve your property's function and appearance. Perfect for edge detailing, minor touch-ups, and prep work before sealing or repairs.</p>
+      <div class="service-slider">
+        <div class="service-slides" id="customSlides">
+          <img src="custom-asphalt-curb-detail.jpg" alt="Detailed asphalt curb edge sealing small project">
+          <img src="small-job-concrete-cleaning.jpg" alt="Concrete surface power washing small job before sealing">
+        </div>
+        <div class="slider-buttons">
+          <button onclick="prevCustomSlide()">❮</button>
+          <button onclick="nextCustomSlide()">❯</button>
         </div>
       </div>
     </div>
   </div>
   <div class="cta">
     <p style="margin-top: 30px;">Not sure what service you need?</p>
-    <a href="sms:+16474255012">Contact Now</a>
+    <a href="estimate.html">Request a Free Estimate</a>
   </div>
 </section>
 <footer>
   <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
 </footer>
-<div class="floating-btns">
-  <a href="sms:+16474255012"><img src="imessage-icon.png" alt="iMessage us"></a>
-  <a href="https://www.facebook.com/messages/t/onewayseal" target="_blank"><img src="facebook-messenger-icon.png" alt="Message us on Facebook"></a>
-</div>
+
 <script>
   function toggleMenu() {
     const nav = document.getElementById("nav-links");
@@ -198,7 +240,6 @@
   const power = createSlider('powerSlides');
   const interlock = createSlider('interlockSlides');
   const custom = createSlider('customSlides');
-  const interlockSeal = createSlider('interlockSealSlides');
   function nextDrivewaySlide() { driveway.next(); }
   function prevDrivewaySlide() { driveway.prev(); }
   function nextAsphaltSlide() { asphalt.next(); }
@@ -209,15 +250,12 @@
   function prevInterlockSlide() { interlock.prev(); }
   function nextCustomSlide() { custom.next(); }
   function prevCustomSlide() { custom.prev(); }
-  function nextInterlockSealSlide() { interlockSeal.next(); }
-  function prevInterlockSealSlide() { interlockSeal.prev(); }
   window.addEventListener('resize', () => {
     driveway.init();
     asphalt.init();
     power.init();
     interlock.init();
     custom.init();
-    interlockSeal.init();
   });
 </script>
 </body>
