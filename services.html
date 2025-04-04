@@ -3,8 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore the asphalt sealing, driveway repair, and power washing services offered by Oneway Asphalt Seal in Bradford.">
-  <title>Our Services - Oneway Asphalt Seal</title>
+  <meta name="description" content="Professional asphalt sealing, driveway repair, interlock, and power washing services in Bradford by Oneway Asphalt Seal. Quality results, affordable pricing.">
+  <meta name="keywords" content="Asphalt Sealing Bradford, Driveway Repair, Power Washing, Interlock Repair, Asphalt Contractor, Oneway Asphalt Seal Services, Bradford Ontario">
+  <meta name="author" content="Oneway Asphalt Seal">
+  <meta property="og:title" content="Our Services - Oneway Asphalt Seal">
+  <meta property="og:description" content="Discover our expert asphalt sealing, driveway repair, power washing, and interlock services across Bradford and surrounding areas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.onewayasphaltseal.ca/services.html">
+  <meta property="og:image" content="https://www.onewayasphaltseal.ca/preview.jpg"> <!-- Replace with actual preview image -->
+  <title>Our Services | Asphalt Sealing & Repairs in Bradford | Oneway Asphalt Seal</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Oneway Asphalt Seal",
+    "image": "https://www.onewayasphaltseal.ca/logo.png",
+    "url": "https://www.onewayasphaltseal.ca",
+    "telephone": "+1-647-425-5012",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bradford",
+      "addressRegion": "ON",
+      "postalCode": "L3Z",
+      "addressCountry": "CA"
+    },
+    "description": "Oneway Asphalt Seal provides high-quality asphalt sealing, driveway repair, power washing, and interlock services in Bradford and nearby areas."
+  }
+  </script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,7 +67,9 @@
       display: flex; flex-direction: column; justify-content: space-between;
       height: 100%;
     }
-    .service-card h3 { color: #CC3D00; margin-bottom: 10px; }
+    .service-card h2 {
+      color: #CC3D00; margin-bottom: 10px; font-size: 20px;
+    }
     .service-card p {
       color: #333; font-size: 16px; line-height: 1.6;
     }
@@ -103,9 +131,8 @@
 <section class="section">
   <h1>Our Services</h1>
   <div class="services-grid">
-    <!-- Driveway Sealing -->
     <div class="service-card">
-      <h3>Driveway Sealing</h3>
+      <h2>Driveway Sealing</h2>
       <p>We apply high-quality, oil-based sealants to protect your asphalt surface from cracks, weather damage, and fading. Regular sealing extends the life of your driveway and boosts curb appeal.</p>
       <div class="service-slider">
         <div class="service-slides" id="drivewaySlides">
@@ -119,9 +146,8 @@
         </div>
       </div>
     </div>
-    <!-- Asphalt Repair -->
     <div class="service-card">
-      <h3>Asphalt Repair</h3>
+      <h2>Asphalt Repair</h2>
       <p>From patching potholes to filling cracks, our expert asphalt repair services restore durability and strength to your surfaces. We handle everything from small touch-ups to larger damage areas.</p>
       <div class="service-slider">
         <div class="service-slides" id="asphaltSlides">
@@ -135,9 +161,8 @@
         </div>
       </div>
     </div>
-    <!-- Power Washing -->
     <div class="service-card">
-      <h3>Power Washing</h3>
+      <h2>Power Washing</h2>
       <p>We offer residential power washing services to clean driveways, patios, walkways, and more. Remove dirt, oil stains, algae, and buildup for a clean, refreshed look before sealing.</p>
       <div class="service-slider">
         <div class="service-slides" id="powerSlides">
@@ -151,9 +176,8 @@
         </div>
       </div>
     </div>
-    <!-- Interlock Repair -->
     <div class="service-card">
-      <h3>Interlock & Interlock Repair</h3>
+      <h2>Interlock & Interlock Repair</h2>
       <p>Whether you're looking to install new interlock or repair existing stonework, we offer expert craftsmanship that enhances curb appeal and functionality. We handle leveling, re-sanding, lifting, and resetting interlock to make it look brand new.</p>
       <div class="service-slider">
         <div class="service-slides" id="interlockSlides">
@@ -168,9 +192,8 @@
         </div>
       </div>
     </div>
-    <!-- Custom Work -->
     <div class="service-card">
-      <h3>Custom Work & Small Projects</h3>
+      <h2>Custom Work & Small Projects</h2>
       <p>From small patch jobs to concrete cleaning and custom requests, we help with those little extras that improve your property's function and appearance. Perfect for edge detailing, minor touch-ups, and prep work before sealing or repairs.</p>
       <div class="service-slider">
         <div class="service-slides" id="customSlides">
@@ -198,7 +221,6 @@
     const nav = document.getElementById("nav-links");
     nav.style.display = nav.style.display === "flex" ? "none" : "flex";
   }
-  // Slider Functions
   function createSlider(id) {
     let index = 0;
     const slides = document.getElementById(id);
