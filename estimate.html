@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Request a free quote for driveway sealing, asphalt repair, or power washing services in Bradford.">
-  <title>Free Estimate - Oneway Asphalt Seal</title>
-
-  <!-- Google tag (gtag.js) -->
+  <meta name="description" content="Get a free estimate from Oneway Asphalt Seal for driveway sealing, asphalt repair, or power washing services in Bradford, Ontario." />
+  <meta name="keywords" content="free driveway estimate Bradford, asphalt repair quote, driveway sealing Bradford, Oneway Asphalt Seal quote" />
+  <meta name="author" content="Oneway Asphalt Seal" />
+  <title>Free Estimate | Oneway Asphalt Seal - Bradford Driveway Sealing & Repair</title>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W9H3692CY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +16,30 @@
     gtag('config', 'G-8W9H3692CY');
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Oneway Asphalt Seal",
+    "image": "IMG_1441.PNG",
+    "url": "https://yourdomain.com/estimate.html",
+    "telephone": "+16474255012",
+    "email": "onewaysealing@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bradford",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "sameAs": [
+      "https://wa.me/16474255012",
+      "https://instagram.com/onewayseal",
+      "https://www.facebook.com/profile.php?id=61574799488543"
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -157,41 +181,34 @@
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo"><img src="IMG_1441.PNG" alt="Oneway Asphalt Seal Logo"></div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo"><img src="IMG_1441.PNG" alt="Oneway Asphalt Seal logo" /></div>
+    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</div>
     <nav class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" title="Home">Home</a>
+      <a href="about.html" title="About">About</a>
+      <a href="services.html" title="Services">Services</a>
+      <a href="contact.html" title="Contact">Contact</a>
     </nav>
   </header>
-
   <section class="section">
     <h1>Request a Free Estimate</h1>
     <p>Tell us a bit about your project and we'll get back to you within 24 hours.</p>
-
     <form action="mailto:onewaysealing@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone" />
-      <input type="text" name="address" placeholder="Service Address or Area" />
-
-      <label>What service(s) do you need?</label>
+      <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone" aria-label="Your Phone" />
+      <input type="text" name="address" placeholder="Service Address or Area" aria-label="Service Address" />
+      <label for="services">What service(s) do you need?</label>
       <div class="services-checklist">
         <label><input type="checkbox" name="service" value="Driveway Sealing" /> Driveway Sealing</label>
         <label><input type="checkbox" name="service" value="Asphalt Repair" /> Asphalt Repair</label>
         <label><input type="checkbox" name="service" value="Power Washing" /> Power Washing</label>
       </div>
-
-      <input type="text" name="preferred_date" placeholder="Preferred Service Date (optional)" />
-      <textarea name="message" placeholder="Additional Details or Questions"></textarea>
-
+      <input type="text" name="preferred_date" placeholder="Preferred Service Date (optional)" aria-label="Preferred Service Date" />
+      <textarea name="message" placeholder="Additional Details or Questions" aria-label="Additional Details"></textarea>
       <button type="submit">Submit Estimate Request</button>
     </form>
-
     <div class="why-choose">
       <h2>Why Choose Oneway?</h2>
       <ul>
@@ -201,18 +218,15 @@
         <li>✔ Locally owned & operated</li>
       </ul>
     </div>
-
     <div class="cta-contact">
       <p>Prefer to speak directly?</p>
-      <a href="tel:+16474255012"><i class="fas fa-phone"></i> 647-425-5012</a>
-      <a href="https://wa.me/16474255012" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+16474255012" title="Call Oneway"><i class="fas fa-phone"></i> 647-425-5012</a>
+      <a href="https://wa.me/16474255012" target="_blank" title="Message us on WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </section>
-
   <footer>
     <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
   </footer>
-
   <script>
     function toggleMenu() {
       const nav = document.getElementById("nav-links");
