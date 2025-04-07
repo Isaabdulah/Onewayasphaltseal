@@ -159,12 +159,12 @@
       margin: 10px 1%; border: 1px solid #ccc;
       border-radius: 5px;
     }
-    .consultation-form a button {
-      width: 100%; padding: 15px;
-      background: #CC3D00; color: white;
-      font-size: 18px; border: none;
-      border-radius: 5px; cursor: pointer;
-    }
+   .consultation-form button {
+  width: 100%; padding: 15px;
+  background: #CC3D00; color: white;
+  font-size: 18px; border: none;
+  border-radius: 5px; cursor: pointer;
+}
     footer {
       background: #333; color: white;
       text-align: center; padding: 20px;
@@ -228,14 +228,17 @@
       <button onclick="nextSlide()">❯</button>
     </div>
   </div>
-  <div class="consultation-form">
-    <h2>Request a Free Consultation</h2>
-    <input type="text" placeholder="Full Name">
-    <input type="text" placeholder="Phone Number">
-    <input type="email" placeholder="Email Address">
-    <input type="text" placeholder="Address or Major Intersection">
-    <a href="sms:+16474255012"><button type="button">Text Us to Get Started</button></a>
-  </div>
+ <div class="consultation-form">
+  <h2>Request a Free Consultation</h2>
+  <form action="mailto:onewaysealing@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
+    <input type="text" name="address" placeholder="Address or Major Intersection" aria-label="Service Address">
+    <button type="submit">Submit Your Request</button>
+  </form>
+  <p style="margin-top: 10px; font-size: 14px;">Prefer to text instead? <a href="sms:+16474255012" style="color: #CC3D00;">Click here</a>.</p>
+</div>
   <a href="sms:+16474255012" class="floating-chat" title="Text Us" style="right: 80px;">
     <i class="fas fa-comment-dots"></i>
   </a>
