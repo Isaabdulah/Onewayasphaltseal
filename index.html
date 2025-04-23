@@ -324,28 +324,29 @@
     <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
   </footer>
  <!-- ⭐ BEGIN: Review Slider Script -->
+<!-- ⭐ JavaScript to Control Review Slider -->
 <script>
   let reviewIndex = 0;
   const reviewTrack = document.querySelector('.review-track');
-  const totalReviews = reviewTrack.children.length;
+  const totalReviewCards = reviewTrack.children.length;
 
   function showReview(index) {
     const width = reviewTrack.children[0].clientWidth;
-    reviewTrack.style.transform = translateX(-${index * width}px);
+    reviewTrack.style.transform = `translateX(-${index * width}px)`;
   }
 
   function nextReview() {
-    reviewIndex = (reviewIndex + 1) % totalReviews;
+    reviewIndex = (reviewIndex + 1) % totalReviewCards;
     showReview(reviewIndex);
   }
 
   function prevReview() {
-    reviewIndex = (reviewIndex - 1 + totalReviews) % totalReviews;
+    reviewIndex = (reviewIndex - 1 + totalReviewCards) % totalReviewCards;
     showReview(reviewIndex);
   }
 
   window.addEventListener('resize', () => showReview(reviewIndex));
-  setInterval(nextReview, 6000); // 🔁 Auto-slide every 6 seconds
+  setInterval(nextReview, 6000); // Auto-slide every 6 seconds
 </script>
 <!-- ⭐ END: Review Slider Script -->
   <script>
