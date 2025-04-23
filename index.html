@@ -363,23 +363,29 @@
     const nav = document.getElementById("nav-links");
     nav.classList.toggle("show");
   }
+<script>
+  let currentIndex = 0;
+  const slides = document.getElementById("slides");
+  const totalSlides = slides.children.length;
+
+  function showSlide(index) {
+    const slideWidth = slides.children[0].clientWidth;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  window.addEventListener('resize', () => showSlide(currentIndex));
+  window.addEventListener('load', () => showSlide(currentIndex));
+  setInterval(nextSlide, 6000); // Auto-slide
 </script>
-    let currentIndex = 0;
-    const slides = document.getElementById("slides");
-    const totalSlides = slides.children.length;
-    function showSlide(index) {
-      const slideWidth = slides.children[0].clientWidth;
-      slides.style.transform = translateX(-${index * slideWidth}px);
-    }
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
-    }
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      showSlide(currentIndex);
-    }
-    window.addEventListener('resize', () => showSlide(currentIndex));
-  </script>
 </body>
 </html>
