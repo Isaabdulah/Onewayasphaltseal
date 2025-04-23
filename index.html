@@ -363,7 +363,13 @@
     const nav = document.getElementById("nav-links");
     nav.classList.toggle("show");
   }
-</script>
+<script>
+  // Hamburger toggle
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("show");
+  }
+  // Image slider
   let currentIndex = 0;
   const slides = document.getElementById("slides");
   const totalSlides = slides.children.length;
@@ -385,7 +391,7 @@
 
   window.addEventListener('resize', () => showSlide(currentIndex));
   window.addEventListener('load', () => showSlide(currentIndex));
-  setInterval(nextSlide, 6000); // Auto-slide
+  setInterval(nextSlide, 6000); // Auto-slide every 6s
 </script>
 </body>
 </html>
