@@ -363,6 +363,7 @@
     const nav = document.getElementById("nav-links");
     nav.classList.toggle("show");
   }
+  
 <script>
   // Hamburger toggle
   function toggleMenu() {
@@ -388,7 +389,6 @@
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     showSlide(currentIndex);
   }
-
   window.addEventListener('resize', () => showSlide(currentIndex));
   window.addEventListener('load', () => showSlide(currentIndex));
   setInterval(nextSlide, 6000); // Auto-slide every 6s
