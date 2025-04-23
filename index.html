@@ -244,46 +244,35 @@
   </div>
 </section>
     <!-- ⭐ BEGIN: Google Review Section -->
-<div id="reviews-section" style="background: #fff; padding: 50px 20px;">
- <h2 style="text-align: center; color: #CC3D00; font-size: 36px;">
-  <i class="fab fa-google" style="margin-right: 10px;"></i>What Our Customers Are Saying
-</h2>
-      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+<!-- ⭐ Google Review Slider Section -->
+<section id="reviews-section" style="background: #fff; padding: 50px 20px;">
+  <h2 style="text-align: center; color: #CC3D00; font-size: 36px;">
+    <i class="fab fa-google" style="margin-right: 10px;"></i>What Our Customers Are Saying
+  </h2>
+  <div class="review-slider" style="max-width: 1000px; margin: 30px auto; overflow: hidden; position: relative;">
+    <div class="review-track" id="review-track" style="display: flex; width: 100%; transition: transform 0.5s ease-in-out;">
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px; box-sizing: border-box;">
         <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"One Way Seal Landscaping did a great job with my driveway. They filled the cracks, took care of not spraying my steps and my walls. Very professional crew."</p>
+        <p style="font-size: 18px; margin-top: 10px;">"One Way Seal Landscaping did a great job with my driveway. Very professional crew."</p>
         <strong>– Ken C</strong>
       </div>
-
-      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px; box-sizing: border-box;">
         <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"Oil based drive way seal with spray. Very professional and satisfied with their service! Highly recommend!"</p>
+        <p style="font-size: 18px; margin-top: 10px;">"Very professional and satisfied with their service! Highly recommend!"</p>
         <strong>– George Lee</strong>
       </div>
-
-      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px; box-sizing: border-box;">
         <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"To sum up the work and quality... Crew came on time, beat market price, did a great job, and were very patient with my kids. Highly recommend!"</p>
+        <p style="font-size: 18px; margin-top: 10px;">"Crew came on time, beat market price, did a great job. Highly recommend!"</p>
         <strong>– Enrico Mazzone</strong>
-      </div>
-
-      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
-        <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"Amazing company. Always get the job done perfectly 👍"</p>
-        <strong>– Leon Gavrilov</strong>
-      </div>
-
-      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
-        <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"Oneway seal landscaping did an amazing job on my backyard interlocking in Bradford. Reasonable price, timely, efficient, and clean finish. Highly recommend!"</p>
-        <strong>– S H</strong>
       </div>
     </div>
   </div>
-  <div style="text-align: center;">
+  <div style="text-align: center; margin-top: 20px;">
     <button onclick="prevReview()" style="margin-right: 20px;">❮</button>
     <button onclick="nextReview()">❯</button>
   </div>
-</div>
+</section>
 <!-- ⭐ END: Google Review Section -->
   <div class="bradford-section">
     <h2>Bradford's Premier Asphalt Sealing Company</h2>
@@ -327,21 +316,21 @@
 <!-- ⭐ JavaScript to Control Review Slider -->
 <script>
   let reviewIndex = 0;
-  const reviewTrack = document.querySelector('.review-track');
-  const totalReviewCards = reviewTrack.children.length;
+  const reviewTrack = document.getElementById('review-track');
+  const totalReviews = reviewTrack.children.length;
 
   function showReview(index) {
-    const width = reviewTrack.children[0].clientWidth;
+    const width = reviewTrack.children[0].offsetWidth;
     reviewTrack.style.transform = `translateX(-${index * width}px)`;
   }
 
   function nextReview() {
-    reviewIndex = (reviewIndex + 1) % totalReviewCards;
+    reviewIndex = (reviewIndex + 1) % totalReviews;
     showReview(reviewIndex);
   }
 
   function prevReview() {
-    reviewIndex = (reviewIndex - 1 + totalReviewCards) % totalReviewCards;
+    reviewIndex = (reviewIndex - 1 + totalReviews) % totalReviews;
     showReview(reviewIndex);
   }
 
