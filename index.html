@@ -183,21 +183,29 @@
       text-align: center; padding: 20px;
       margin-top: 50px;
     }
-    @media (max-width: 768px) {
-      .menu-toggle { display: block; }
-      .nav-links {
-        display: none; flex-direction: column;
-        background: rgba(204, 61, 0, 0.9);
-        position: absolute; top: 60px; right: 0;
-        width: 50%; text-align: center;
-        padding: 10px;
-      }
-      .nav-links a { display: block; padding: 10px; }
-      .hero-text { font-size: 36px; }
-      .consultation-form input {
-        width: 90%; margin: 10px 0;
-      }
-    }
+   @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 60%;
+    background-color: rgba(204, 61, 0, 0.95);
+    padding: 20px;
+    z-index: 1001;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
   </style>
 </head>
 <body>
@@ -350,11 +358,12 @@
   setInterval(nextReview, 6000); // Auto-slide every 6 sec
 </script>
 <!-- ⭐ END: Review Slider Script -->
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("nav-links");
-      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-    }
+ <script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("show");
+  }
+</script>
     let currentIndex = 0;
     const slides = document.getElementById("slides");
     const totalSlides = slides.children.length;
