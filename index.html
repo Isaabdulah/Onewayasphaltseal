@@ -209,6 +209,43 @@
       <a href="https://www.instagram.com/onewayseal" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
+    <div id="reviews-section" style="background: #fff; padding: 50px 20px;">
+  <h2 style="text-align: center; color: #CC3D00; font-size: 36px;">What Our Customers Are Saying</h2>
+  <div class="review-slider" style="max-width: 900px; margin: 40px auto; overflow: hidden;">
+    <div class="review-track" style="display: flex; transition: transform 0.5s ease-in-out;">
+
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+        <p style="font-size: 18px;">"One Way Seal Landscaping did a great job with my driveway. They filled the cracks, took care of not spraying my steps and my walls. Very professional crew."</p>
+        <strong>– Ken C</strong>
+      </div>
+
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+        <p style="font-size: 18px;">"Oil based drive way seal with spray. Very professional and satisfied with their service! Highly recommend!"</p>
+        <strong>– George Lee</strong>
+      </div>
+
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+        <p style="font-size: 18px;">"To sum up the work and quality... Crew came on time, beat market price, did a great job, and were very patient with my kids. Highly recommend!"</p>
+        <strong>– Enrico Mazzone</strong>
+      </div>
+
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+        <p style="font-size: 18px;">"Amazing company. Always get the job done perfectly 👍"</p>
+        <strong>– Leon Gavrilov</strong>
+      </div>
+
+      <div class="review-card" style="flex: 0 0 100%; padding: 20px;">
+        <p style="font-size: 18px;">"Oneway seal landscaping did an amazing job on my backyard interlocking in Bradford. Reasonable price, timely, efficient, and clean finish. Highly recommend!"</p>
+        <strong>– S H</strong>
+      </div>
+
+    </div>
+  </div>
+  <div style="text-align: center;">
+    <button onclick="prevReview()" style="margin-right: 20px;">❮</button>
+    <button onclick="nextReview()">❯</button>
+  </div>
+    </div>
   </div>
   <div style="background: #fff; padding: 50px 20px; text-align: center;">
   <h2 style="color: #CC3D00; font-size: 36px; margin-bottom: 30px;">Why Choose Oneway Asphalt Seal?</h2>
@@ -269,6 +306,31 @@
   <footer>
     <p>© 2025 Oneway Asphalt Seal. All Rights Reserved.</p>
   </footer>
+</script>
+  <!-- ⭐ BEGIN: Review Slider Script -->
+<script>
+  let reviewIndex = 0;
+  const reviewTrack = document.querySelector('.review-track');
+  const totalReviews = reviewTrack.children.length;
+
+  function showReview(index) {
+    const width = reviewTrack.children[0].clientWidth;
+    reviewTrack.style.transform = `translateX(-${index * width}px)`;
+  }
+
+  function nextReview() {
+    reviewIndex = (reviewIndex + 1) % totalReviews;
+    showReview(reviewIndex);
+  }
+
+  function prevReview() {
+    reviewIndex = (reviewIndex - 1 + totalReviews) % totalReviews;
+    showReview(reviewIndex);
+  }
+
+  window.addEventListener('resize', () => showReview(reviewIndex));
+</script>
+END
   <script>
     function toggleMenu() {
       const nav = document.getElementById("nav-links");
