@@ -26,6 +26,7 @@
     <!-- Preload Google Font -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" as="style" onload="this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="residential-driveway-sealing-in-bradford-oneway-asphalt-seal.jpg">
   <!-- Favicon -->
   <link rel="icon" href="/favicon-oneway-asphalt-seal.png" type="image/png" />
   <link rel="apple-touch-icon" href="/favicon-oneway-asphalt-seal.png" />
@@ -68,9 +69,11 @@
       text-decoration: none; color: white;
       padding: 10px 15px; border-radius: 5px;
     }
+  
     .menu-toggle {
       display: none; font-size: 25px; cursor: pointer;
     }
+  
     .hero {
       position: relative; width: 100%; height: 550px;
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('residential-driveway-sealing-in-bradford-oneway-asphalt-seal.jpg') no-repeat center center/cover;
@@ -78,62 +81,42 @@
       align-items: center; justify-content: center;
       text-align: center; margin-top: 68px;
     }
- .hero-text {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  line-height: 1.2;
-}
-
-/* 📱 Make it mobile friendly */
-@media (max-width: 768px) {
-  .hero-text {
-    font-size: 30px;
-    padding: 0 15px;
-    line-height: 1.4;
-  }
-}
+    .hero-text {
+      font-family: 'Montserrat', sans-serif;
+      color: white; font-size: 48px; font-weight: bold;
+      margin-bottom: 10px; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+      line-height: 1.2;
+    }
     .hero-subtext {
-      font-size: 20px; color: #eee;
-      max-width: 90%; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+      font-size: 20px; color: #eee; max-width: 90%;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+      margin-top: 20px;
     }
     .social-icons {
       display: flex; justify-content: center; gap: 20px; margin-top: 25px;
     }
-    .social-icons a {
-      font-size: 28px; text-decoration: none;
-    }
+    .social-icons a { font-size: 28px; text-decoration: none; }
+  
     .fa-whatsapp { color: #25D366; }
     .fa-comment-dots { color: #007AFF; }
     .fa-instagram { color: #C13584; }
     .fa-facebook { color: #1877F2; }
+  
     .floating-chat {
-      position: fixed;
-      bottom: 20px;
-      background: white;
-      color: #CC3D00;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 22px;
-      z-index: 999;
+      position: fixed; bottom: 20px; background: white;
+      color: #CC3D00; padding: 15px; border-radius: 50%;
+      font-size: 22px; z-index: 999;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: transform 0.3s;
     }
-    .floating-chat:hover {
-      transform: scale(1.1);
-    }
+    .floating-chat:hover { transform: scale(1.1); }
+  
     .bradford-section {
       background: #CC3D00; color: white;
-      padding: 50px 20px; text-align: center;
-      margin-top: 50px;
+      padding: 50px 20px; text-align: center; margin-top: 50px;
     }
-    .bradford-section h2 {
-      font-size: 36px; font-weight: bold; margin-bottom: 20px;
-    }
+    .bradford-section h2 { font-size: 36px; font-weight: bold; margin-bottom: 20px; }
+  
     .slider {
       position: relative; max-width: 1000px;
       margin: 30px auto; overflow: hidden; border-radius: 10px;
@@ -146,14 +129,14 @@
     }
     .slider-buttons {
       position: absolute; top: 50%;
-      width: 100%; display: flex;
-      justify-content: space-between; transform: translateY(-50%);
+      width: 100%; display: flex; justify-content: space-between;
+      transform: translateY(-50%);
     }
     .slider-buttons button {
       background: rgba(0, 0, 0, 0.6); color: white;
-      border: none; padding: 10px 15px;
-      font-size: 18px; cursor: pointer;
+      border: none; padding: 10px 15px; font-size: 18px; cursor: pointer;
     }
+  
     .consultation-form {
       width: 90%; max-width: 1000px;
       margin: 30px auto; padding: 20px;
@@ -172,41 +155,63 @@
       margin: 10px 1%; border: 1px solid #ccc;
       border-radius: 5px;
     }
-   .consultation-form button {
-  width: 100%; padding: 15px;
-  background: #CC3D00; color: white;
-  font-size: 18px; border: none;
-  border-radius: 5px; cursor: pointer;
-}
+    .consultation-form button {
+      width: 100%; padding: 15px;
+      background: #CC3D00; color: white;
+      font-size: 18px; border: none;
+      border-radius: 5px; cursor: pointer;
+    }
+  
     footer {
       background: #333; color: white;
-      text-align: center; padding: 20px;
-      margin-top: 50px;
+      text-align: center; padding: 20px; margin-top: 50px;
     }
-   @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    right: 0;
-    width: 60%;
-    background-color: rgba(204, 61, 0, 0.95);
-    padding: 20px;
-    z-index: 1001;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
+  
+    /* 📱 Mobile styles */
+    @media (max-width: 768px) {
+      .hero-text { font-size: 30px; padding: 0 15px; line-height: 1.4; }
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none; flex-direction: column;
+        position: absolute; top: 65px; right: 0;
+        width: 60%; background-color: rgba(204, 61, 0, 0.95);
+        padding: 20px; z-index: 1001;
+        text-align: center; gap: 15px;
+      }
+      .nav-links.show { display: flex; }
+    }
   </style>
+  <style>
+    .cta-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 18px 25px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+    .cta-light {
+      background: white;
+      color: black;
+      border: 2px solid black;
+    }
+    .cta-light:hover {
+      background: black;
+      color: white;
+      transform: scale(1.05);
+    }
+    .cta-dark {
+      background: #CC3D00;
+      color: white;
+      border: none;
+    }
+    .cta-dark:hover {
+      background: #a53200;
+      transform: scale(1.05);
+    }
+    </style>    
 </head>
 <body>
   <header>
@@ -221,16 +226,45 @@
       <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank"><i class="fab fa-facebook"></i></a>
     </nav>
   </header>
-  <div class="hero">
-    <h1 class="hero-text">Professional Driveway Sealing & Asphalt Repair</h1>
-   <p class="hero-subtext" style="font-size: 20px; color:  #f9f9f9; max-width: 90%; margin-top: 20px;">
-  At OnewaySeal, we treat every driveway like it’s our own. Based in Bradford, we specialize in driveway sealing, asphalt repair, power washing, and interlock restoration — helping your home look clean, sharp, and protected. We show up when we say we will — and we get the job done right.
-</p>
-<section style="padding: 40px 20px; text-align: center;">
-  <a href="services.html" style="display: inline-block; margin: 10px; padding: 18px 25px; background: white; color: black; font-weight: bold; text-decoration: none; border-radius: 5px;">Learn More</a>
-  <a href="estimate.html" style="display: inline-block; margin: 10px; padding: 18px 25px; background: #CC3D00; color: white; font-weight: bold; text-decoration: none; border-radius: 5px;">Get a Quote</a>
+  <section class="hero" style="position: relative; width: 100%; height: 550px; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('residential-driveway-sealing-in-bradford-oneway-asphalt-seal.jpg') no-repeat center center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-top: 68px;">
+    <h1 style="font-family: 'Montserrat', sans-serif; color: white; font-size: 48px; font-weight: bold; margin-bottom: 10px; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); line-height: 1.2;">
+      Professional Driveway Sealing & Asphalt Repair
+    </h1>
+    <p style="font-size: 20px; color: #f9f9f9; max-width: 90%; margin-top: 20px; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);">
+      At <strong>OnewaySeal</strong>, we specialize in <a href="services.html" style="color: #CC3D00; font-weight: bold;">driveway sealing, asphalt repair, power washing, and interlock restoration</a> throughout Bradford and surrounding areas. We treat every project like it's our own.
+    </p>
+  
+    <div style="margin-top: 30px;">
+      <a href="services.html" class="cta-btn cta-light">Explore Our Services</a>
+      <a href="estimate.html" class="cta-btn cta-dark">Get a Free Estimate</a>
+    </div>
+  </section>
+  </div>
+<section style="padding: 50px 20px; text-align: center; background: #fff;">
+  <h2 style="color: #0f0c0c; font-size: 32px; margin-bottom: 20px;">Our Core Services</h2>
+  <p style="font-size: 18px; color: #555; max-width: 800px; margin: 0 auto 30px;">
+    Protect and upgrade your property with our professional, reliable services.
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+    <div style="padding: 20px;">
+      <i class="fas fa-road" style="font-size: 40px; color: #CC3D00; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 20px; margin-top: 10px;">Driveway Sealing</h3>
+    </div>
+    <div style="padding: 20px;">
+      <i class="fas fa-tools" style="font-size: 40px; color: #CC3D00; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 20px; margin-top: 10px;">Asphalt Repair</h3>
+    </div>
+    <div style="padding: 20px;">
+      <i class="fas fa-water" style="font-size: 40px; color: #CC3D00; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 20px; margin-top: 10px;">Power Washing</h3>
+    </div>
+    <div style="padding: 20px;">
+      <i class="fas fa-border-style" style="font-size: 40px; color: #CC3D00; margin-bottom: 10px;"></i>
+      <h3 style="font-size: 20px; margin-top: 10px;">Interlock Repair</h3>
+    </div>
+  </div>
 </section>
-
+  ...
     <div class="social-icons">
       <a href="https://wa.me/16474255012" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="sms:+16474255012" target="_blank"><i class="fas fa-comment-dots"></i></a>
@@ -238,62 +272,43 @@
       <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
   </div>
-  <section style="background: #f9f9f9; padding: 60px 20px; text-align: center;">
-  <h2 style="color: #0f0c0c; font-size: 36px; margin-bottom: 40px;">Why Homeowners Choose OnewaySeal</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: 0 auto;">
-
-    <div style="flex: 1 1 22%; min-width: 200px; margin-bottom: 30px;">
-      <h3 style="font-size: 48px; color: #0f0c0c;">15+</h3>
-      <p style="font-size: 18px;">Years of Experience</p>
-    </div>
-
-    <div style="flex: 1 1 22%; min-width: 200px; margin-bottom: 30px;">
-      <h3 style="font-size: 48px; color: #0f0c0c;">5.0 ★</h3>
-      <p style="font-size: 18px;">Google Rating</p>
-    </div>
-
-    <div style="flex: 1 1 22%; min-width: 200px; margin-bottom: 30px;">
-      <h3 style="font-size: 48px; color: #0f0c0c;">2100+</h3>
-      <p style="font-size: 18px;">Happy Clients</p>
-    </div>
-
-    <div style="flex: 1 1 22%; min-width: 200px; margin-bottom: 30px;">
-      <h3 style="font-size: 48px; color: #0f0c0c;">100%</h3>
-      <p style="font-size: 18px;">Satisfaction Guaranteed</p>
-    </div>
-
-  </div>
-</section>
-    <!-- ⭐ BEGIN: Google Review Section -->
-<!-- ⭐ Google Review Slider Section -->
-<section id="reviews-section" style="background: #fff; padding: 50px 20px;">
-  <h2 style="text-align: center; color: #0f0c0c; font-size: 36px;">
-    <i class="fab fa-google" style="margin-right: 10px;"></i>What Our Customers Are Saying
-  </h2>
-  <div class="review-slider" style="max-width: 1000px; margin: 30px auto; overflow: hidden; position: relative;">
-    <div class="review-track" id="review-track" style="display: flex; width: 100%; transition: transform 0.5s ease-in-out;">
-      <div class="review-card" style="min-width: 100%; padding: 20px; box-sizing: border-box;">
-        <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"One Way Seal Landscaping did a great job with my driveway. Very professional crew."</p>
-        <strong>– Ken C</strong>
-      </div>
-      <div class="review-card" style="min-width: 100%; padding: 20px; box-sizing: border-box;">
-        <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"Very professional and satisfied with their service! Highly recommend!"</p>
-        <strong>– George Lee</strong>
-      </div>
-      <div class="review-card" style="min-width: 100%; padding: 20px; box-sizing: border-box;">
-        <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
-        <p style="font-size: 18px; margin-top: 10px;">"Crew came on time, beat market price, did a great job. Highly recommend!"</p>
-        <strong>– Enrico Mazzone</strong>
+  <section style="background: #f9f9f9; padding: 70px 20px; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="color: #0f0c0c; font-size: 38px; margin-bottom: 15px;">Why Homeowners Trust Oneway Asphalt Seal</h2>
+      <p style="font-size: 18px; color: #666; max-width: 800px; margin: 0 auto 50px;">
+        We’re proud to be Bradford’s trusted team for driveway sealing, asphalt repair, and exterior restoration services. Here's what sets us apart:
+      </p>
+  
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px;">
+  
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="font-size: 48px; color: #CC3D00; margin-bottom: 10px;">🏆</div>
+          <h3 style="font-size: 22px; color: #0f0c0c; margin-bottom: 10px;">15+ Years of Expertise</h3>
+          <p style="font-size: 16px; color: #555;">Decades of combined experience means reliable service and proven quality workmanship.</p>
+        </div>
+  
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="font-size: 48px; color: #CC3D00; margin-bottom: 10px;">⭐</div>
+          <h3 style="font-size: 22px; color: #0f0c0c; margin-bottom: 10px;">5-Star Reputation</h3>
+          <p style="font-size: 16px; color: #555;">Our 5.0★ Google rating shows our dedication to customer satisfaction and high standards.</p>
+        </div>
+  
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="font-size: 48px; color: #CC3D00; margin-bottom: 10px;">🔨</div>
+          <h3 style="font-size: 22px; color: #0f0c0c; margin-bottom: 10px;">2100+ Completed Projects</h3>
+          <p style="font-size: 16px; color: #555;">Thousands of driveways sealed and restored across Bradford and surrounding areas.</p>
+        </div>
+  
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="font-size: 48px; color: #CC3D00; margin-bottom: 10px;">✅</div>
+          <h3 style="font-size: 22px; color: #0f0c0c; margin-bottom: 10px;">100% Satisfaction Guarantee</h3>
+          <p style="font-size: 16px; color: #555;">We aren’t finished until you're completely happy with the result—guaranteed.</p>
+        </div>
+  
       </div>
     </div>
-  </div>
-  <div style="text-align: center; margin-top: 20px;">
-    <button onclick="prevReview()" style="margin-right: 20px;">❮</button>
-    <button onclick="nextReview()">❯</button>
-  </div>
-</section>
+  </section>
+  
 <!-- ⭐ END: Google Review Section -->
   <div class="bradford-section">
     <h2>Bradford's Premier Asphalt Sealing Company</h2>
