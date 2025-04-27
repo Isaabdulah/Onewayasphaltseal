@@ -166,52 +166,96 @@
       background: #333; color: white;
       text-align: center; padding: 20px; margin-top: 50px;
     }
-  
-    /* 📱 Mobile styles */
-    @media (max-width: 768px) {
-      .hero-text { font-size: 30px; padding: 0 15px; line-height: 1.4; }
-      .menu-toggle { display: block; }
-      .nav-links {
-        display: none; flex-direction: column;
-        position: absolute; top: 65px; right: 0;
-        width: 60%; background-color: rgba(204, 61, 0, 0.95);
-        padding: 20px; z-index: 1001;
-        text-align: center; gap: 15px;
-      }
-      .nav-links.show { display: flex; }
+  /* 📱 Mobile styles */
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 30px;
+      padding: 0 15px;
+      line-height: 1.4;
     }
-  </style>
-  <style>
-    .cta-btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 18px 25px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: all 0.3s ease;
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      width: 60%;
+      background-color: rgba(204, 61, 0, 0.95);
+      padding: 20px;
+      z-index: 1001;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    /* ⭐ Mobile hero fixes */
+    .hero {
+      padding: 100px 20px 40px 20px;
+      height: auto;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+    }
+
+    .hero p {
       font-size: 18px;
+      margin-top: 15px;
     }
-    .cta-light {
-      background: white;
-      color: black;
-      border: 2px solid black;
+
+    .cta-btn {
+      width: 90%;
+      max-width: 300px;
+      font-size: 16px;
     }
-    .cta-light:hover {
-      background: black;
-      color: white;
-      transform: scale(1.05);
-    }
-    .cta-dark {
-      background: #CC3D00;
-      color: white;
-      border: none;
-    }
-    .cta-dark:hover {
-      background: #a53200;
-      transform: scale(1.05);
-    }
-    </style>    
+  } /* ← THIS closes the @media properly */
+
+  /* 🎯 CTA Buttons (outside of @media) */
+  .cta-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 18px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+
+  .cta-light {
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  .cta-light:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .cta-dark {
+    background: #CC3D00;
+    color: white;
+    border: none;
+  }
+
+  .cta-dark:hover {
+    background: #a53200;
+    transform: scale(1.05);
+  }
+</style>
+
 </head>
 <body>
   <header>
@@ -226,19 +270,19 @@
       <a href="https://www.facebook.com/profile.php?id=61574799488543" target="_blank"><i class="fab fa-facebook"></i></a>
     </nav>
   </header>
-  <section class="hero" style="position: relative; width: 100%; height: 550px; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('residential-driveway-sealing-in-bradford-oneway-asphalt-seal.jpg') no-repeat center center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-top: 68px;">
-    <h1 style="font-family: 'Montserrat', sans-serif; color: white; font-size: 48px; font-weight: bold; margin-bottom: 10px; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); line-height: 1.2;">
+  <section class="hero" style="position: relative; width: 100%; height: 550px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('residential-driveway-sealing-in-bradford-oneway-asphalt-seal.jpg') no-repeat center center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-top: 68px; padding: 20px;">
+    <h1 class="hero-text" style="font-family: 'Montserrat', sans-serif; color: white; font-size: 48px; font-weight: bold; margin-bottom: 10px; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); line-height: 1.2;">
       Professional Driveway Sealing & Asphalt Repair
     </h1>
-    <p style="font-size: 20px; color: #f9f9f9; max-width: 90%; margin-top: 20px; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);">
+    <p class="hero-subtext" style="font-size: 20px; color: #f9f9f9; max-width: 800px; margin-top: 20px; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);">
       At <strong>OnewaySeal</strong>, we specialize in <a href="services.html" style="color: #CC3D00; font-weight: bold;">driveway sealing, asphalt repair, power washing, and interlock restoration</a> throughout Bradford and surrounding areas. We treat every project like it's our own.
     </p>
   
-    <div style="margin-top: 30px;">
-      <a href="services.html" class="cta-btn cta-light">Explore Our Services</a>
-      <a href="estimate.html" class="cta-btn cta-dark">Get a Free Estimate</a>
+    <div class="hero-buttons" style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      <a href="services.html" class="cta-btn cta-light" style="padding: 15px 25px;">Explore Our Services</a>
+      <a href="estimate.html" class="cta-btn cta-dark" style="padding: 15px 25px;">Get a Free Estimate</a>
     </div>
-  </section>
+  </section>  
   </div>
 <section style="padding: 50px 20px; text-align: center; background: #fff;">
   <h2 style="color: #0f0c0c; font-size: 32px; margin-bottom: 20px;">Our Core Services</h2>
