@@ -43,13 +43,18 @@
   <meta name="twitter:description" content="Asphalt sealing, repair, and restoration in Bradford. Affordable, fast, reliable. Text for a free estimate.">
   <meta name="twitter:image" content="https://www.onewayasphaltseal.com/images/home-preview.jpg">
   <!-- Google Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W9H3692CY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8W9H3692CY');
-  </script>
+    window.addEventListener('load', function() {
+      var gtagScript = document.createElement('script');
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-8W9H3692CY";
+      gtagScript.async = true;
+      document.head.appendChild(gtagScript);
+      gtag('js', new Date());
+      gtag('config', 'G-8W9H3692CY');
+    });
+  </script>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -466,13 +471,16 @@ footer {
   </div>
   <div class="consultation-form" style="max-width: 1200px; margin: 1 auto; padding: 2em;">
     <h2>Request a Free Consultation</h2>
-  <form action="mailto:onewaysealing@gmail.com" method="POST" enctype="text/plain">
+  <form action="https://formsubmit.co/onewaysealing@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://www.onewayasphaltseal.com/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+  
     <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
     <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
     <input type="text" name="address" placeholder="Address or Major Intersection" aria-label="Service Address">
     <button type="submit">Submit Your Request</button>
-  </form>
+  </form>  
   <p style="margin-top: 10px; font-size: 14px;">Prefer to text instead? <a href="sms:+16474255012" style="color: #CC3D00;">Click here</a>.</p>
 </div>
  <a href="sms:+16474255012" class="floating-chat" title="Text Us" aria-label="Text Oneway Asphalt Seal at 647-425-5012" style="right: 80px;">
