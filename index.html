@@ -229,12 +229,13 @@ footer {
 }
 
  /* 📱 Mobile styles */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
 
 .hero {
   padding-top: 140px;
   padding-bottom: 40px;
-  height: auto;
+  height: auto; /* ✅ Good */
+  overflow: visible; /* ✅ Add this line */
   background-size: cover;
   background-position: center;
 }
@@ -275,12 +276,18 @@ footer {
   display: flex;
 }
 
+.hero-buttons {
+  flex-direction: column; 
+  gap: 15px;               
+}
+
 .cta-btn {
   width: 90%;
   max-width: 300px;
   font-size: 16px;
 }
 }
+
   /* 🎯 CTA Buttons (outside of @media) */
   .hero-buttons {
   display: flex;
