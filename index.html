@@ -28,6 +28,7 @@
         "areaServed": [
           "Bradford",
           "Newmarket",
+          "Barrie",
           "Markham",
           "Woodbridge",
           "Aurora",
@@ -92,7 +93,7 @@
             "name": "What areas do you serve?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We serve Bradford and nearby communities including Newmarket, Markham, Woodbridge, Aurora, East Gwillimbury, Innisfil, Orangeville, Georgetown, Vaughan, Tottenham, and Maple."
+              "text": "We serve Bradford and nearby communities including Newmarket, Barrie, Markham, Woodbridge, Aurora, East Gwillimbury, Innisfil, Orangeville, Georgetown, Vaughan, Tottenham, and Maple."
             }
           },
           {
@@ -491,6 +492,28 @@
       line-height: 1.7;
     }
 
+    #locations .location-card {
+      padding: 1.2em;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    #locations a.location-card {
+      text-decoration: none;
+      color: #111;
+      display: block;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    #locations a.location-card:hover {
+      border-color: #CC3D00;
+      color: #CC3D00;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
     footer {
       background: #333;
       color: white;
@@ -778,7 +801,7 @@
 
       <div class="faq-item">
         <h3>What areas do you serve?</h3>
-        <p>We proudly serve Bradford and surrounding communities including Newmarket, Markham, Woodbridge, Aurora, East Gwillimbury, Innisfil, Orangeville, Georgetown, Vaughan, Tottenham, and Maple.</p>
+        <p>We proudly serve Bradford and surrounding communities including Newmarket, Barrie, Markham, Woodbridge, Aurora, East Gwillimbury, Innisfil, Orangeville, Georgetown, Vaughan, Tottenham, and Maple.</p>
       </div>
 
       <div class="faq-item">
@@ -795,20 +818,21 @@
   <section id="locations" style="padding: 3em 1em; background-color: #f9f9f9;">
     <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
       <h2 style="font-size: 2.4em; margin-bottom: 0.3em;">📍 Service Areas</h2>
-      <p style="font-size: 1.2em; margin-bottom: 2em;">Proudly serving these Ontario communities:</p>
+      <p style="font-size: 1.2em; margin-bottom: 2em;">Proudly serving Bradford and nearby Ontario communities.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5em;">
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Bradford</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Newmarket</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Markham</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Woodbridge</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Aurora</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">East Gwillimbury</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Innisfil</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Orangeville</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Georgetown</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Vaughan</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Tottenham</div>
-        <div style="padding: 1.2em; border: 1px solid #ccc; border-radius: 10px;">Maple</div>
+        <div class="location-card">Bradford</div>
+        <a href="driveway-sealing-newmarket.html" class="location-card" aria-label="Driveway sealing in Newmarket">Newmarket</a>
+        <a href="driveway-sealing-barrie.html" class="location-card" aria-label="Driveway sealing in Barrie">Barrie</a>
+        <div class="location-card">Markham</div>
+        <div class="location-card">Woodbridge</div>
+        <div class="location-card">Aurora</div>
+        <div class="location-card">East Gwillimbury</div>
+        <div class="location-card">Innisfil</div>
+        <div class="location-card">Orangeville</div>
+        <div class="location-card">Georgetown</div>
+        <div class="location-card">Vaughan</div>
+        <div class="location-card">Tottenham</div>
+        <div class="location-card">Maple</div>
       </div>
     </div>
   </section>
